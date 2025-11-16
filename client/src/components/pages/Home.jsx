@@ -111,20 +111,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ===== Moments Feed Section (social-style) ===== */}
-      <section className="home-section moments-section">
-        <div className="section-container">
-          <h2>Moments</h2>
-          <p className="section-subtitle">
-            My thoughts, discoveries, and the occasional weirdness.
-          </p>
-          <MomentsFeed />
-          <Link to="/moments" className="section-link">
-            View All Moments →
-          </Link>
-        </div>
-      </section>
-
       {/* ===== Publications Section ===== */}
       <section id="publications" className="home-section publications-section">
         <div className="section-container">
@@ -162,6 +148,20 @@ const Home = () => {
           </div>
           <Link to="/academic" className="section-link">
             View Academic & Professional →
+          </Link>
+        </div>
+      </section>
+
+      {/* ===== Moments Feed Section (social-style) ===== */}
+      <section className="home-section moments-section">
+        <div className="section-container">
+          <h2>Moments</h2>
+          <p className="section-subtitle">
+            My thoughts, discoveries, and the occasional weirdness.
+          </p>
+          <MomentsFeed />
+          <Link to="/moments" className="section-link">
+            View All Moments →
           </Link>
         </div>
       </section>
