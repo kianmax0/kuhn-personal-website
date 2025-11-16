@@ -4,8 +4,8 @@ import MomentCard from "./MomentCard";
 import { getLatestMoments } from "../../data/momentsData";
 
 const MomentsFeed = () => {
-  // 获取最新的两条moment
-  const data = getLatestMoments(2);
+  // 只获取最新的一个moment
+  const data = getLatestMoments(1);
 
   return (
     <section id="moments" className="moments-feed-section">
