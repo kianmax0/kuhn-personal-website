@@ -1,0 +1,939 @@
+/* Moments Page - Instagram/Social Media Style */
+
+.moments-page {
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
+    "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.moments-container {
+  max-width: 935px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Profile Header */
+.profile-header {
+  background: var(--card-bg, rgba(255, 255, 255, 0.95));
+  border-radius: 20px;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  border: 3px solid var(--border-color, rgba(0, 0, 0, 0.1));
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.profile-avatar {
+  flex-shrink: 0;
+}
+
+.avatar-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #666666;
+  object-fit: cover;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.profile-details {
+  flex: 1;
+}
+
+.profile-name {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  color: var(--text-primary);
+  background: linear-gradient(135deg, var(--text-primary) 0%, #666666 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.profile-subtitle {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  margin: 0 0 1.5rem 0;
+  font-weight: 500;
+}
+
+.profile-bio {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0 0 1.5rem 0;
+  font-weight: 400;
+}
+
+.profile-stats {
+  display: flex;
+  justify-content: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  min-width: 80px;
+}
+
+.stat-number {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1;
+  white-space: nowrap;
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: unset !important;
+  background-clip: unset !important;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+  margin-top: 0.2rem;
+}
+
+/* Tab Navigation */
+.tab-navigation {
+  display: flex;
+  border-top: 2px solid var(--border-color, rgba(0, 0, 0, 0.1));
+  padding-top: 1rem;
+  gap: 0.5rem;
+}
+
+.tab-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  background: none;
+  border: none;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+  justify-content: center;
+}
+
+.tab-button:hover {
+  background: var(--hover-bg, rgba(0, 0, 0, 0.05));
+  color: var(--text-primary);
+  transform: translateY(-2px);
+}
+
+.tab-button.active {
+  background: #333333;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.tab-icon {
+  font-size: 1.1rem;
+}
+
+/* Content Area */
+.moments-content {
+  min-height: 400px;
+}
+
+/* Feed View */
+.feed-view {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.moments-feed {
+  width: 100%;
+  max-width: 935px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.moment-post {
+  background: var(--card-bg, rgba(255, 255, 255, 0.95));
+  border-radius: 20px;
+  overflow: hidden;
+  border: 3px solid var(--border-color, rgba(0, 0, 0, 0.1));
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.moment-post:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.post-interactions {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--border-color, rgba(0, 0, 0, 0.1));
+}
+
+.interaction-buttons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.interaction-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.interaction-btn:hover {
+  background: var(--hover-bg, rgba(0, 0, 0, 0.05));
+  color: var(--text-primary);
+  transform: scale(1.05);
+}
+
+.like-btn:hover {
+  background: rgba(128, 128, 128, 0.1);
+  color: #666666;
+}
+
+.comment-btn:hover {
+  background: rgba(96, 96, 96, 0.1);
+  color: #555555;
+}
+
+.share-btn:hover {
+  background: rgba(64, 64, 64, 0.1);
+  color: #444444;
+}
+
+/* Grid View */
+.grid-view {
+  width: 100%;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.grid-item {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: 15px;
+  overflow: hidden;
+  background: var(--card-bg, rgba(255, 255, 255, 0.95));
+  border: 2px solid var(--border-color, rgba(0, 0, 0, 0.1));
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.grid-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Grid images now use background-image for better filling */
+
+.multi-indicator {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .moments-container {
+    padding: 1rem;
+  }
+
+  .profile-header {
+    padding: 1.5rem;
+  }
+
+  .profile-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .avatar-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .profile-name {
+    font-size: 1.8rem;
+  }
+
+  .tab-navigation {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .tab-button {
+    padding: 1rem;
+  }
+
+  .photo-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+
+  .moments-feed {
+    max-width: 100%;
+  }
+
+  .interaction-buttons {
+    flex-wrap: wrap;
+  }
+
+  .profile-stats {
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .stat {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .avatar-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .profile-name {
+    font-size: 1.5rem;
+  }
+
+  .profile-stats {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .stat {
+    align-items: center;
+    text-align: center;
+    min-width: 60px;
+  }
+
+  .stat-number {
+    font-size: 1.1rem;
+  }
+
+  .stat-number {
+    font-size: 1.3rem;
+  }
+}
+
+/* Dark Mode Specific Styles */
+.moments-page.dark {
+  color: var(--text-primary-dark, #ffffff);
+}
+
+.dark .profile-header,
+.dark .moment-post,
+.dark .grid-item {
+  background: var(--card-bg-dark, rgba(255, 255, 255, 0.05));
+  border-color: var(--border-dark, rgba(255, 255, 255, 0.1));
+  backdrop-filter: blur(20px);
+}
+
+.dark .profile-name {
+  color: var(--text-primary-dark, #ffffff);
+}
+
+.dark .profile-subtitle,
+.dark .stat-label,
+.dark .moment-time,
+.dark .moment-location {
+  color: var(--text-secondary-dark, rgba(255, 255, 255, 0.7));
+}
+
+.dark .stat-number {
+  color: var(--text-primary-dark, #ffffff);
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: unset !important;
+  background-clip: unset !important;
+}
+
+.dark .tab-navigation {
+  border-color: var(--border-dark, rgba(255, 255, 255, 0.1));
+}
+
+.dark .tab-button {
+  color: var(--text-secondary-dark, rgba(255, 255, 255, 0.7));
+}
+
+.dark .tab-button:hover {
+  background: var(--hover-bg-dark, rgba(255, 255, 255, 0.1));
+  color: var(--text-primary-dark, #ffffff);
+}
+
+.dark .tab-button.active {
+  background: #666666;
+  color: white;
+}
+
+.dark .interaction-btn {
+  color: var(--text-secondary-dark, rgba(255, 255, 255, 0.7));
+}
+
+.dark .interaction-btn:hover {
+  background: var(--hover-bg-dark, rgba(255, 255, 255, 0.1));
+  color: var(--text-primary-dark, #ffffff);
+}
+
+.dark .post-interactions {
+  border-color: var(--border-dark, rgba(255, 255, 255, 0.1));
+}
+
+.dark .moment-name {
+  color: var(--text-primary-dark, #ffffff);
+}
+
+.dark .moment-text {
+  color: var(--text-primary-dark, #ffffff);
+}
+
+/* Animation Effects */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.moment-post {
+  animation: slideInUp 0.6s ease-out;
+}
+
+.grid-item {
+  animation: slideInUp 0.4s ease-out;
+}
+
+/* MomentCard Overrides for Moments Page */
+.moments-page .moment-card {
+  background: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 1rem;
+  margin: 0;
+}
+
+.moments-page .moment-card:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.moments-page .moment-header {
+  margin-bottom: 0.5rem;
+}
+
+.moments-page .moment-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid #666666;
+}
+
+.moments-page .moment-meta {
+  flex: 1;
+}
+
+.moments-page .moment-name {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text-primary);
+  margin-bottom: 0.2rem;
+}
+
+.moments-page .moment-time {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.2rem;
+}
+
+.moments-page .moment-location {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  opacity: 0.8;
+}
+
+.moments-page .moment-text {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text-primary);
+  margin: 0.25rem 0;
+  font-weight: 700;
+  white-space: pre-line;
+}
+
+.moments-page .moment-media {
+  margin: 0.25rem 0;
+  width: 100% !important;
+}
+
+.moments-page .moment-media .moment-image-grid {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+}
+
+.moments-page .moment-image {
+  border-radius: 15px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.moments-page .moment-image-grid {
+  border-radius: 15px;
+  overflow: hidden;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  display: grid !important;
+}
+
+/* 更高优先级的样式覆盖 */
+.moments-page .moment-media .moment-image-grid {
+  margin: 0 !important;
+  width: 100% !important;
+  max-width: none !important;
+}
+
+.moments-page .moment-grid-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+/* Loading Animation */
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.loading {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Image Performance Optimization */
+.lazy-image-container {
+  position: relative;
+  background: var(--card-bg, rgba(255, 255, 255, 0.95));
+  border-radius: 15px;
+  overflow: hidden;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  background: var(--card-bg, rgba(255, 255, 255, 0.95));
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.loading-container p {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--border-color, rgba(0, 0, 0, 0.1));
+  border-top: 3px solid #666666;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.loading-spinner.large {
+  width: 60px;
+  height: 60px;
+  border-width: 4px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Image Optimization */
+.moments-page img {
+  image-rendering: optimizeQuality;
+  max-width: 100%;
+  height: auto;
+  will-change: auto;
+}
+
+.moment-image,
+.grid-image {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Performance optimizations */
+.moment-post {
+  contain: layout style paint;
+}
+
+.moments-feed {
+  contain: layout;
+}
+
+/* Reduced Motion for better performance */
+@media (prefers-reduced-motion: reduce) {
+  .moment-post,
+  .grid-item,
+  .loading-spinner {
+    animation: none;
+    transition: none;
+  }
+
+  .moment-post:hover,
+  .grid-item:hover {
+    transform: none;
+  }
+}
+
+/* Moment Grid Styles - 九宫格样式 */
+.moments-page .moment-image-grid {
+  display: grid !important;
+  gap: 6px;
+  border-radius: 14px;
+  overflow: hidden;
+  margin: 0 auto;
+  background: none;
+}
+
+/* Single image */
+.moments-page .moment-grid-single {
+  grid-template-columns: 1fr !important;
+  grid-template-rows: 1fr;
+  aspect-ratio: 4/3;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+}
+
+/* 2x2 Grid for 2-4 images */
+.moments-page .moment-grid-quad {
+  grid-template-columns: 1fr 1fr !important;
+  grid-template-rows: 1fr 1fr;
+  aspect-ratio: 1;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+}
+
+/* 3x3 Grid for 5-9 images */
+.moments-page .moment-grid-nine {
+  grid-template-columns: repeat(3, 1fr) !important;
+  grid-template-rows: repeat(3, 1fr);
+  aspect-ratio: 1;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0;
+}
+
+/* Grid item styling */
+.moments-page .moment-grid-item {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1 !important;
+  background: none;
+  width: 100%;
+  height: 100%;
+  min-height: 100px;
+}
+
+.moments-page .moment-grid-image {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 0 !important;
+}
+
+/* 简单的悬停效果 */
+.moments-page .moment-grid-item:hover .moment-grid-image {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* Dark mode for new elements */
+.dark .lazy-image-container,
+.dark .image-placeholder {
+  background: var(--card-bg-dark, rgba(255, 255, 255, 0.05));
+}
+
+.dark .loading-container {
+  color: var(--text-secondary-dark, rgba(255, 255, 255, 0.7));
+}
+
+.dark .moment-image-grid,
+.dark .moment-grid-item {
+  background: var(--card-bg-dark, rgba(255, 255, 255, 0.05));
+}
+
+/* 最高优先级：确保九宫格100%填满moment容器 */
+.moments-page.moments-page .moment-image-grid.moment-grid-nine,
+.moments-page.moments-page .moment-image-grid.moment-grid-quad,
+.moments-page.moments-page .moment-image-grid.moment-grid-single,
+.moments-page.moments-page .moment-media .moment-image-grid {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  display: grid !important;
+}
+
+/* 漂浮爱心特效 */
+.floating-heart {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  font-size: 1.5rem;
+  color: #ff6b6b;
+  animation: floatUp 2s ease-out forwards;
+  transform: translateX(-50%);
+}
+
+@keyframes floatUp {
+  0% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateX(-50%) translateY(-50px) scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-100px) scale(0.8);
+  }
+}
+
+/* 爆发爱心特效 */
+.burst-heart {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  font-size: 1.2rem;
+  color: #ff6b6b;
+  animation: burstOut 1.5s ease-out forwards;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+@keyframes burstOut {
+  0% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%) scale(0.5);
+  }
+  20% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%) scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(calc(-50% + var(--end-x)))
+      translateY(calc(-50% + var(--end-y))) scale(0.3) rotate(360deg);
+  }
+}
+
+/* 点赞状态样式 */
+.like-btn.liked {
+  background: rgba(128, 128, 128, 0.15);
+  color: #666666;
+  transform: scale(1.05);
+}
+
+.like-btn.liked .icon {
+  animation: likeAnimation 0.4s ease;
+}
+
+.like-btn:active {
+  transform: scale(0.95);
+}
+
+@keyframes likeAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* 简化交互按钮区域 */
+.interaction-buttons {
+  justify-content: flex-start;
+}
+
+.like-btn {
+  min-width: 60px;
+  position: relative;
+}
+
+/* Image Preview Modal Styles - Fix for oversized vertical images */
+.image-preview-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.image-preview-container {
+  position: relative;
+  max-width: 95vw;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-preview {
+  max-width: 90vw;
+  max-height: 85vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+  animation: zoomIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Navigation arrows for image preview */
+.image-nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10001;
+}
+
+.image-nav-arrow:hover {
+  background: rgba(0, 0, 0, 0.9);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.image-nav-prev {
+  left: 20px;
+}
+
+.image-nav-next {
+  right: 20px;
+}
