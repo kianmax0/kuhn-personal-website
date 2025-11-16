@@ -27,6 +27,15 @@ import macau6 from "../assets/macau_6.png";
 import macau7 from "../assets/macau_7.png";
 import macau8 from "../assets/macau_8.png";
 import macau9 from "../assets/macau_9.png";
+import shanghai1 from "../assets/shanghai_1.png";
+import shanghai2 from "../assets/shanghai_2.png";
+import shanghai3 from "../assets/shanghai_3.png";
+import shanghai4 from "../assets/shanghai_4.png";
+import shanghai5 from "../assets/shanghai_5.png";
+import shanghai6 from "../assets/shanghai_6.png";
+import shanghai7 from "../assets/shanghai_7.png";
+import shanghai8 from "../assets/shanghai_8.png";
+import shanghai9 from "../assets/shanghai_9.png";
 
 // 共享的moments数据 - 按时间顺序，最早的ID最小，最新的ID最大
 export const momentsData = [
@@ -34,7 +43,17 @@ export const momentsData = [
     id: 1,
     timestamp: "Feb 8, 2025",
     text: "Shanghai's heartbeats 🌇",
-    imageUrl: "", // 你可以在这里添加上海的图片路径
+    images: [
+      shanghai1,
+      shanghai2,
+      shanghai3,
+      shanghai4,
+      shanghai5,
+      shanghai6,
+      shanghai7,
+      shanghai8,
+      shanghai9,
+    ],
     location: "Shanghai, China",
   },
   {
