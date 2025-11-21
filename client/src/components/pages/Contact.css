@@ -226,17 +226,16 @@
   font-weight: 700;
   margin: 0 0 1rem;
   color: var(--text-primary);
-  animation: slideInFromBottom 1.2s ease-out 0.3s both;
+  /* animation moved to .typewriter-title */
 }
-
 /* Typewriter Effect */
 .typewriter-title {
   overflow: hidden;
   border-right: 3px solid var(--text-primary);
   white-space: nowrap;
-  animation: slideInFromBottom 1.2s ease-out 0.3s both,
-    typewriter 1.5s steps(18, end) 1.5s both,
-    blink-caret 0.75s step-end 3s infinite;
+  animation: slideInFromBottom 0.8s ease-out 0.1s both,
+    typewriter 0.7s steps(18, end) 0.7s both,
+    blink-caret 0.5s step-end 1.5s infinite;
 }
 
 @keyframes typewriter {
