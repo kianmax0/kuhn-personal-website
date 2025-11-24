@@ -58,12 +58,6 @@ import shanghai9 from "../assets/shanghai_9.jpg";
 // 共享的moments数据 - 按时间顺序，最早的ID最小，最新的ID最大
 export const momentsData = [
   {
-    id: 16,
-    timestamp: "Nov 21, 2025",
-    text: "Just watched a video of a heart surgery. Seeing the surgeons work so delicately on the edge of life and death was truly awe-inspiring. How I wish that what I create in the future can also help others—maybe even save lives.",
-    // imageUrl: undefined, // Add an image if available
-  },
-  {
     id: 15,
     timestamp: "Apr 9, 2025",
     text: "kuhn",
