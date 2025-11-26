@@ -1,4 +1,5 @@
 import React from "react";
+import GithubIcon from "../assets/GithubIcon";
 import { Link } from "react-router-dom";
 import MomentsFeed from "../modules/MomentsFeed";
 import "./Home.css";
@@ -222,6 +223,21 @@ const Home = () => {
                 >
                   <span className="social-icon">🎮</span>
                   <span>Steam</span>
+                </a>
+                <a
+                  href="https://github.com/kianmax0"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-button github-button"
+                  style={{ display: "flex", alignItems: "center", gap: 6 }}
+                >
+                  <span
+                    className="social-icon"
+                    style={{ display: "flex", alignItems: "center" }}
+                  >
+                    <GithubIcon size={22} color="#181717" />
+                  </span>
+                  <span style={{ fontWeight: 600 }}>GitHub</span>
                 </a>
               </div>
             </div>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import GithubIcon from "../assets/GithubIcon";
 import "./Contact.css";
 
 const Contact = () => {
@@ -230,33 +231,73 @@ const Contact = () => {
                 </span>
               </div>
 
-              {/* Line 12: Social section end */}
-              <div className="code-line">
+              {/* Line 12: GitHub */}
+              <div
+                className={`code-line clickable ${
+                  selectedLine === 12 ? "selected" : ""
+                } github-contact-line`}
+                onClick={() =>
+                  handleLineClick(12, () =>
+                    handleLinkClick("https://github.com/kianmax0")
+                  )
+                }
+                style={{ display: "flex", alignItems: "center" }}
+              >
                 <span className="line-number">12</span>
+                <span
+                  className="code-text"
+                  style={{ display: "flex", alignItems: "center", gap: 6 }}
+                >
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <span className="property">github</span>
+                  <span className="operator">:</span>{" "}
+                  <span className="string">"kianmax0"</span>
+                  <span className="punctuation">,</span>
+                  <span
+                    className="comment"
+                    style={{ display: "flex", alignItems: "center", gap: 4 }}
+                  >
+                    <span
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        marginLeft: 4,
+                      }}
+                    >
+                      <GithubIcon size={18} color="#181717" />
+                    </span>
+                    <span>Click to visit GitHub</span>
+                  </span>
+                </span>
+              </div>
+
+              {/* Line 13: Social section end */}
+              <div className="code-line">
+                <span className="line-number">13</span>
                 <span className="code-text">
                   &nbsp;&nbsp;<span className="bracket">{"}"}</span>
                   <span className="punctuation">,</span>
                 </span>
               </div>
 
-              {/* Line 13: Object end */}
+              {/* Line 14: Object end */}
               <div className="code-line">
-                <span className="line-number">13</span>
+                <span className="line-number">14</span>
                 <span className="code-text">
                   <span className="bracket">{"}"}</span>
                   <span className="punctuation">;</span>
                 </span>
               </div>
 
-              {/* Line 14: Empty line */}
+              {/* Line 15: Empty line */}
               <div className="code-line">
-                <span className="line-number">14</span>
+                <span className="line-number">15</span>
                 <span className="code-text"></span>
               </div>
 
-              {/* Line 15: Export statement */}
+              {/* Line 16: Export statement */}
               <div className="code-line">
-                <span className="line-number">15</span>
+                <span className="line-number">16</span>
                 <span className="code-text">
                   <span className="keyword">export</span>{" "}
                   <span className="keyword">default</span>{" "}
