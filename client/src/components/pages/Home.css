@@ -1,3 +1,15 @@
+.scholar-button {
+  background: #4285f4;
+  color: #fff;
+  border: 2px solid #4285f4;
+}
+.scholar-button:hover {
+  background: #fff;
+  color: #4285f4;
+  border-color: #4285f4;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(66, 133, 244, 0.15);
+}
 .github-button {
   background: #f5f5f5;
   color: #181717;

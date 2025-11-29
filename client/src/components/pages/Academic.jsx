@@ -25,10 +25,10 @@ const Academic = () => {
           <div className="articles-list articles-spaced">
             <article className="article-card">
               <div className="publication-status">
-                <span className="status-badge accepted">✅ Accepted</span>
+                <span className="status-badge published">✅ Published</span>
               </div>
               <h3>Visualizing genetic information flow in Space and Time</h3>
-              <p className="article-date">2025-11-11</p>
+              <p className="article-date">Nov 21, 2025</p>
               <p className="article-journal">Science China Life Sciences</p>
               <p>
                 This review synthesizes the historical development, underlying
@@ -37,15 +37,17 @@ const Academic = () => {
                 and optimal applications.
               </p>
               <a
-                href="#"
-                onClick={(e) => {
-                  e.preventDefault();
-                  alert(
-                    "📄 Paper Status: Accepted for Publication\n\n🎉 This paper has been accepted by Science China Life Sciences and is currently in the publication process.\n\n📅 Acceptance Date: November 11, 2025\n\n⏳ Status: Awaiting final publication and DOI assignment\n\nThe full text will be available once the journal completes the publication process."
-                  );
+                href="https://doi.org/10.1007/s11427-025-3158-6"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="article-doi-link"
+                style={{
+                  color: "#166534",
+                  fontWeight: 600,
+                  wordBreak: "break-all",
                 }}
               >
-                Read more →
+                DOI: https://doi.org/10.1007/s11427-025-3158-6
               </a>
             </article>
           </div>

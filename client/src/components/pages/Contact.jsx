@@ -241,63 +241,112 @@ const Contact = () => {
                     handleLinkClick("https://github.com/kianmax0")
                   )
                 }
-                style={{ display: "flex", alignItems: "center" }}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
               >
                 <span className="line-number">12</span>
                 <span
                   className="code-text"
-                  style={{ display: "flex", alignItems: "center", gap: 6 }}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 6,
+                    justifyContent: "center",
+                    width: "100%",
+                  }}
                 >
                   &nbsp;&nbsp;&nbsp;&nbsp;
                   <span className="property">github</span>
                   <span className="operator">:</span>{" "}
                   <span className="string">"kianmax0"</span>
                   <span className="punctuation">,</span>
-                  <span
-                    className="comment"
-                    style={{ display: "flex", alignItems: "center", gap: 4 }}
-                  >
+                  <span className="comment">
+                    {" "}
+                    //{" "}
                     <span
                       style={{
-                        display: "flex",
-                        alignItems: "center",
-                        marginLeft: 4,
+                        display: "inline-flex",
+                        verticalAlign: "middle",
                       }}
                     >
                       <GithubIcon size={18} color="#181717" />
-                    </span>
-                    <span>Click to visit GitHub</span>
+                    </span>{" "}
+                    Click to visit GitHub
                   </span>
                 </span>
               </div>
 
-              {/* Line 13: Social section end */}
-              <div className="code-line">
+              {/* Line 13: Google Scholar */}
+              <div
+                className={`code-line clickable ${
+                  selectedLine === 13 ? "selected" : ""
+                }`}
+                onClick={() =>
+                  handleLineClick(13, () =>
+                    handleLinkClick(
+                      "https://scholar.google.com/citations?user=MFsbreQAAAAJ&hl=en"
+                    )
+                  )
+                }
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
                 <span className="line-number">13</span>
+                <span
+                  className="code-text"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 6,
+                    justifyContent: "center",
+                    width: "100%",
+                  }}
+                >
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <span className="property">googleScholar</span>
+                  <span className="operator">:</span>{" "}
+                  <span className="string">"Kun Zhao"</span>
+                  <span className="punctuation">,</span>
+                  <span className="comment">
+                    {" "}
+                    // 🎓 Click to visit Google Scholar
+                  </span>
+                </span>
+              </div>
+
+              {/* Line 14: Social section end */}
+              <div className="code-line">
+                <span className="line-number">14</span>
                 <span className="code-text">
                   &nbsp;&nbsp;<span className="bracket">{"}"}</span>
                   <span className="punctuation">,</span>
                 </span>
               </div>
 
-              {/* Line 14: Object end */}
+              {/* Line 15: Object end */}
               <div className="code-line">
-                <span className="line-number">14</span>
+                <span className="line-number">15</span>
                 <span className="code-text">
                   <span className="bracket">{"}"}</span>
                   <span className="punctuation">;</span>
                 </span>
               </div>
 
-              {/* Line 15: Empty line */}
+              {/* Line 16: Empty line */}
               <div className="code-line">
-                <span className="line-number">15</span>
+                <span className="line-number">16</span>
                 <span className="code-text"></span>
               </div>
 
-              {/* Line 16: Export statement */}
+              {/* Line 17: Export statement */}
               <div className="code-line">
-                <span className="line-number">16</span>
+                <span className="line-number">17</span>
                 <span className="code-text">
                   <span className="keyword">export</span>{" "}
                   <span className="keyword">default</span>{" "}

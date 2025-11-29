@@ -8,12 +8,13 @@ const articles = [
   {
     id: 1,
     title: "Visualizing genetic information flow in Space and Time",
-    date: "2025-11-11",
+    date: "Nov 21, 2025",
     journal: "Science China Life Sciences",
     abstract:
       "This review synthesizes the historical development, underlying principles, and technicalimplementations of dynamic DNA and RNA imaging approaches, comparing their capabilities, limitations, and optimal applications.",
-    status: "accepted",
-    statusText: "Accepted",
+    status: "published",
+    statusText: "Published",
+    doi: "https://doi.org/10.1007/s11427-025-3158-6",
   },
 ];
 
@@ -133,17 +134,21 @@ const Home = () => {
                   <p className="article-journal">{article.journal}</p>
                 )}
                 <p>{article.abstract}</p>
-                <a
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    alert(
-                      "📄 Paper Status: Accepted for Publication\n\n🎉 This paper has been accepted by Science China Life Sciences and is currently in the publication process.\n\n📅 Acceptance Date: November 11, 2025\n\n⏳ Status: Awaiting final publication and DOI assignment\n\nThe full text will be available once the journal completes the publication process."
-                    );
-                  }}
-                >
-                  Read more →
-                </a>
+                {article.doi && (
+                  <a
+                    href={article.doi}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="article-doi-link"
+                    style={{
+                      color: "#166534",
+                      fontWeight: 600,
+                      wordBreak: "break-all",
+                    }}
+                  >
+                    DOI: {article.doi}
+                  </a>
+                )}
               </article>
             ))}
           </div>
@@ -207,15 +212,6 @@ const Home = () => {
               <h3>Find me elsewhere</h3>
               <div className="social-buttons">
                 <a
-                  href="https://space.bilibili.com/256800766?spm_id_from=333.1007.0.0"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="social-button bilibili-button"
-                >
-                  <span className="social-icon">📺</span>
-                  <span>Bilibili</span>
-                </a>
-                <a
                   href="https://steamcommunity.com/profiles/76561198993237339/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -238,6 +234,27 @@ const Home = () => {
                     <GithubIcon size={22} color="#181717" />
                   </span>
                   <span style={{ fontWeight: 600 }}>GitHub</span>
+                </a>
+                <a
+                  href="https://scholar.google.com/citations?user=MFsbreQAAAAJ&hl=en"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-button scholar-button"
+                  style={{ display: "flex", alignItems: "center", gap: 6 }}
+                >
+                  <span className="social-icon" style={{ fontSize: 20 }}>
+                    🎓
+                  </span>
+                  <span style={{ fontWeight: 600 }}>Google Scholar</span>
+                </a>
+                <a
+                  href="https://space.bilibili.com/256800766?spm_id_from=333.1007.0.0"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-button bilibili-button"
+                >
+                  <span className="social-icon">📺</span>
+                  <span>Bilibili</span>
                 </a>
               </div>
             </div>
