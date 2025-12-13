@@ -83,12 +83,42 @@ const Academic = () => {
             </article>
 
             <article className="article-card">
+              <h3>💡 Westlake University Learning Innovation Award</h3>
+              <p className="article-date">2025</p>
+              <p className="article-journal">Westlake University</p>
+              <p>
+                Recognition for innovative learning approaches and academic
+                excellence
+              </p>
+            </article>
+
+            <article className="article-card">
               <h3>🥈 iGEM Silver Medal</h3>
               <p className="article-date">2024</p>
               <p className="article-journal">
                 International Genetically Engineered Machine Competition
               </p>
               <p>Silver medal in premier synthetic biology competition</p>
+            </article>
+
+            <article className="article-card">
+              <h3>💡 Westlake University Learning Innovation Award</h3>
+              <p className="article-date">2024</p>
+              <p className="article-journal">Westlake University</p>
+              <p>
+                Recognition for innovative learning approaches and academic
+                excellence
+              </p>
+            </article>
+
+            <article className="article-card">
+              <h3>🤝 Westlake University Social Responsibility Award</h3>
+              <p className="article-date">2024</p>
+              <p className="article-journal">Westlake University</p>
+              <p>
+                Awarded for outstanding contributions to social responsibility
+                and community service
+              </p>
             </article>
 
             <article className="article-card">
@@ -117,13 +147,32 @@ const Academic = () => {
           <div className="articles-list articles-spaced">
             <article className="article-card">
               <h3>🔬 Undergraduate Research Student</h3>
-              <p className="article-date">2024 - Present</p>
+              <p className="article-date">2025 - Present</p>
+              <p className="article-journal">
+                Westlake University - Liu Ding Lab (Social Neural Networks
+                Laboratory)
+              </p>
+              <p>
+                Currently conducting research in the Social Neural Networks
+                Laboratory under Prof. Liu Ding's guidance. The lab focuses on
+                understanding the neural basis of social instinctive behaviors,
+                exploring how social behaviors are represented and processed in
+                the brain, and investigating the fundamental principles of
+                neural network dynamics. Research areas include social
+                homeostasis, touch sensation in social behavior, and the neural
+                mechanisms underlying social needs and loneliness.
+              </p>
+            </article>
+
+            <article className="article-card">
+              <h3>🔬 Undergraduate Research Student</h3>
+              <p className="article-date">2024 - 2025</p>
               <p className="article-journal">
                 Westlake University - Ma Qiufu Lab (Systems Physiology and
                 Bioelectronic Medicine)
               </p>
               <p>
-                Participating in research on systems physiology and acupuncture
+                Participated in research on systems physiology and acupuncture
                 mechanisms under Prof. Ma Qiufu's guidance. Learning about pain
                 pathways, neural-immune-target tissue interactions, and the
                 scientific basis of traditional medicine through
