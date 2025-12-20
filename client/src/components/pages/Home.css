@@ -762,6 +762,16 @@ body {
   width: 100%;
 }
 
+/* 3x2 Grid for 5-6 images */
+.moment-grid-six {
+  grid-template-columns: repeat(3, 1fr) !important;
+  grid-template-rows: repeat(2, 1fr);
+  aspect-ratio: 3/2;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+}
+
 /* Grid item styling */
 .moment-grid-item {
   position: relative;

@@ -13,6 +13,7 @@ const MomentCard = ({ timestamp, text, imageUrl, images = [], location }) => {
   const getGridClass = (count) => {
     if (count <= 1) return "moment-grid-single";
     if (count <= 4) return "moment-grid-quad";
+    if (count <= 6) return "moment-grid-six";
     return "moment-grid-nine";
   };
 

@@ -54,6 +54,12 @@ import shanghai6 from "../assets/shanghai_6.jpg";
 import shanghai7 from "../assets/shanghai_7.jpg";
 import shanghai8 from "../assets/shanghai_8.jpg";
 import shanghai9 from "../assets/shanghai_9.jpg";
+import stanford1 from "../assets/Stanford_1.jpg";
+import stanford2 from "../assets/Stanford_2.jpg";
+import stanford3 from "../assets/Stanford_3.jpg";
+import stanford4 from "../assets/Stanford_4.jpg";
+import stanford5 from "../assets/Stanford_5.jpg";
+import stanford6 from "../assets/Stanford_6.jpg";
 
 // 共享的moments数据 - 按时间顺序，最早的ID最小，最新的ID最大
 export const momentsData = [
@@ -186,6 +192,13 @@ export const momentsData = [
     text: "Golden Gate 🌉",
     imageUrl: goldenGate,
     location: "San Francisco, CA",
+  },
+  {
+    id: 16,
+    timestamp: "Dec 19, 2025",
+    text: "Die Luft der Freiheit weht",
+    images: [stanford1, stanford2, stanford3, stanford4, stanford5, stanford6],
+    location: "Stanford, CA",
   },
 ];
 
