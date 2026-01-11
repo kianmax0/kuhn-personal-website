@@ -4,9 +4,10 @@
 /* Academic Page Styles */
 .academic-page {
   min-height: 100vh;
-  padding: 4rem 6rem;
-  max-width: 1400px;
-  margin: 0 auto;
+  width: 100%;
+  padding: 4rem 2rem 6rem;
+  max-width: none;
+  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
     "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: transparent !important;
