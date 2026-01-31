@@ -27,7 +27,7 @@ const About = () => {
         "\n" +
         "-- Neuroscience Researcher & Code Explorer\n" +
         "-- Currently debugging both neurons and JavaScript",
-      "color: #00ff88; font-size: 14px; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,255,136,0.3);"
+      "color: #00ff88; font-size: 14px; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,255,136,0.3);",
     );
   }, []);
 
@@ -291,7 +291,7 @@ const About = () => {
     ];
 
     const intervals = intervalConfigs.map(({ fn, delay }) =>
-      setInterval(fn, delay)
+      setInterval(fn, delay),
     );
     return () => intervals.forEach(clearInterval);
   }, []);
@@ -346,7 +346,7 @@ const About = () => {
       } while (
         attempts < 10 &&
         backgroundProcesses.some(
-          (p) => Math.abs(p.startPosition.y - yPosition) < 8 // 8%的最小间距
+          (p) => Math.abs(p.startPosition.y - yPosition) < 8, // 8%的最小间距
         )
       );
 
@@ -593,8 +593,8 @@ const About = () => {
             </div>
 
             <div className="status-item">
-              <dt>❤️‍🩹 Relationship Status:</dt>
-              <dd>404 Girlfriend Not Found</dd>
+              <dt>❤️ Relationship Status:</dt>
+              <dd>In a committed bug-free relationship 🥰</dd>
             </div>
 
             <div className="status-item">
@@ -633,7 +633,7 @@ const About = () => {
                   }}
                   onClick={() =>
                     alert(
-                      '🤣 They say I\'m ENTJ-A - "The Commander"\n\nBut honestly, I think it\'s more like:\n🧠 "Eternally Needs Toジ Analyze"\n☕ "Extremely Neurotic, Thinks Alot"\n🔍 "Explores Neural Tissue Actively"\n\n👁️ Click around to discover more about this chaotic system!'
+                      '🤣 They say I\'m ENTJ-A - "The Commander"\n\nBut honestly, I think it\'s more like:\n🧠 "Eternally Needs Toジ Analyze"\n☕ "Extremely Neurotic, Thinks Alot"\n🔍 "Explores Neural Tissue Actively"\n\n👁️ Click around to discover more about this chaotic system!',
                     )
                   }
                   title="Click me for personality insights!"
