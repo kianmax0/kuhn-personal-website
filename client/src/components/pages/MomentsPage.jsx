@@ -55,8 +55,8 @@ const MomentsPage = () => {
       direction === "next"
         ? (currentGridIndex + 1) % allGridImages.length
         : currentGridIndex === 0
-        ? allGridImages.length - 1
-        : currentGridIndex - 1;
+          ? allGridImages.length - 1
+          : currentGridIndex - 1;
 
     setCurrentGridIndex(newIndex);
     setSelectedGridImage(allGridImages[newIndex]);
@@ -215,7 +215,7 @@ const MomentsPage = () => {
                   <span className="stat-label">joined</span>
                 </div>
                 <div className="stat">
-                  <span className="stat-number">Berkeley</span>
+                  <span className="stat-number">Hangzhou</span>
                   <span className="stat-label">location</span>
                 </div>
               </div>

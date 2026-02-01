@@ -544,7 +544,7 @@ const About = () => {
               <dd>Over-caffeinated Brain v3.0 (Triple-core: BIO+CS+ECON)</dd>
 
               <dt>💾 RAM:</dt>
-              <dd>16GB (5GB studying, 5GB playing, 6GB random thoughts)</dd>
+              <dd>32GB (10GB studying, 10GB playing, 12GB random thoughts)</dd>
 
               <dt>💽 Storage:</dt>
               <dd>∞ TB (mostly useless knowledge + stackoverflow solutions)</dd>
@@ -559,7 +559,7 @@ const About = () => {
               <dd>Lab WiFi: Unstable but persistent connection</dd>
 
               <dt>💿 OS:</dt>
-              <dd>ProcrastinationOS 2025 (surprisingly stable system)</dd>
+              <dd>ProcrastinationOS 2026 (surprisingly stable system)</dd>
             </dl>
           </div>
         </div>
@@ -573,7 +573,7 @@ const About = () => {
           <div className="personal-status-container">
             <div className="status-item">
               <dt>📍 Current Location:</dt>
-              <dd>Berkeley, CA，United States</dd>
+              <dd>Hangzhou, China</dd>
             </div>
 
             <div className="status-item">
@@ -608,7 +608,7 @@ const About = () => {
                     flexWrap: "wrap",
                   }}
                 >
-                  💻 CSGO & Apex Legends -
+                  💻 CSGO & Apex Legends
                   <span style={{ color: "#ff9800", fontSize: "0.8em" }}>
                     [Status: Hibernating]
                   </span>
@@ -618,7 +618,7 @@ const About = () => {
 
             <div className="status-item">
               <dt>📚 Reading Queue:</dt>
-              <dd>"Principles of Economics"... and 30 pending papers</dd>
+              <dd>"THEORETICAL NRUROSCIENCE" - XIAO-JING WANG</dd>
             </div>
 
             <div className="status-item">
