@@ -27,7 +27,7 @@ const Home = () => {
           <div style={{ animation: "fadeInDown 0.8s ease-out" }}>
             <h1 className="hero-title">Hi, I'm Kuhn 👋</h1>
           </div>
-          <p className="hero-tagline">A Biology Undergraduate</p>
+          <p className="hero-tagline">A Neuroscience Undergraduate</p>
           <p className="hero-description">
             Welcome to my digital space. <br></br>Explore my work, thoughts, and
             creative moments.
@@ -55,14 +55,15 @@ const Home = () => {
                 University.
               </p>
               <p>
-                But my real obsession? I’m investigating if auricular
-                acupuncture (yep, poking ears) can send "secret messages" to the
-                vagus nerve—the big boss that helps decide your body's 'chill
-                out' vs. 'freak out' modes.
+                But my real obsession? I&apos;m studying social need—what the
+                brain treats as socially relevant—and how that information is
+                encoded in the medial preoptic nucleus (MPN), a hypothalamic hub
+                that helps orchestrate social and motivational behavior.
               </p>
               <p>
-                Basically, I'm scientifically figuring out if poking the right
-                spot actually makes people happier (or... something else).
+                In short: I want to know how need-like social signals get
+                represented in neural activity—and what that tells us about how
+                brains navigate belonging, conflict, and everything in between.
               </p>
             </div>
             <div className="about-block">

@@ -541,7 +541,7 @@ const About = () => {
           <div className="specs-container">
             <dl className="specs-list compact-specs">
               <dt>🖥️ CPU:</dt>
-              <dd>Over-caffeinated Brain v3.0 (Triple-core: BIO+CS+ECON)</dd>
+              <dd>Over-caffeinated Brain v3.0 (Triple-core: NEU+CS+ECON)</dd>
 
               <dt>💾 RAM:</dt>
               <dd>32GB (10GB studying, 10GB playing, 12GB random thoughts)</dd>
@@ -598,7 +598,7 @@ const About = () => {
             </div>
 
             <div className="status-item">
-              <dt>🎮 Gaming.exe:</dt>
+              <dt>🎮 Gaming:</dt>
               <dd>
                 <span
                   style={{
@@ -662,7 +662,7 @@ const About = () => {
                       gap: "12px",
                     }}
                   >
-                    📚 Zotero.exe
+                    📚 Zotero
                     <span style={{ color: "#4caf50", fontSize: "0.9em" }}>
                       [Running]
                     </span>
@@ -674,7 +674,7 @@ const About = () => {
                       gap: "12px",
                     }}
                   >
-                    🌍 Safari.app
+                    🌍 Safari
                     <span style={{ color: "#2196f3", fontSize: "0.9em" }}>
                       [Active]
                     </span>
@@ -686,7 +686,7 @@ const About = () => {
                       gap: "12px",
                     }}
                   >
-                    💻 VS Code
+                    💻 Cursor
                     <span style={{ color: "#ff5722", fontSize: "0.9em" }}>
                       [Always On]
                     </span>
@@ -698,7 +698,7 @@ const About = () => {
                       gap: "12px",
                     }}
                   >
-                    🎧 Spotify.app
+                    🎧 Spotify
                     <span style={{ color: "#1db954", fontSize: "0.9em" }}>
                       [Background]
                     </span>

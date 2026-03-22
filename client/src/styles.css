@@ -21,6 +21,13 @@ html[data-theme="light"] {
   --text-secondary: #555;
   --text-tertiary: #999;
   --navbar-bg: linear-gradient(90deg, #f0f0f0 0%, #e5e5e5 50%, #f0f0f0 100%);
+  --navbar-glass-bg: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.78) 0%,
+    rgba(245, 246, 250, 0.68) 100%
+  );
+  --navbar-glass-border: rgba(0, 0, 0, 0.09);
+  --navbar-glass-shadow: 0 4px 28px rgba(0, 0, 0, 0.07);
   --navbar-text: #333;
   --navbar-link: #666;
   --border-color: #e0e0e0;
@@ -40,6 +47,13 @@ html:not([data-theme]) {
   --text-secondary: #d0d0d0;
   --text-tertiary: #a0a0a0;
   --navbar-bg: linear-gradient(90deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+  --navbar-glass-bg: linear-gradient(
+    180deg,
+    rgba(28, 28, 32, 0.78) 0%,
+    rgba(12, 12, 16, 0.68) 100%
+  );
+  --navbar-glass-border: rgba(255, 255, 255, 0.1);
+  --navbar-glass-shadow: 0 4px 32px rgba(0, 0, 0, 0.45);
   --navbar-text: #ffffff;
   --navbar-link: #d0d0d0;
   --border-color: #404040;
@@ -113,7 +127,7 @@ main {
 
 /* NavBar Styles */
 .navbar {
-  background: var(--navbar-bg);
+  background: var(--navbar-glass-bg);
   position: fixed;
   top: 0;
   left: 0;
@@ -121,9 +135,11 @@ main {
   height: var(--navbar-height);
   padding: 0 16px;
   z-index: 1000;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(10px);
-  transition: background 0.3s ease;
+  border-bottom: 1px solid var(--navbar-glass-border);
+  box-shadow: var(--navbar-glass-shadow);
+  -webkit-backdrop-filter: blur(20px) saturate(1.65);
+  backdrop-filter: blur(20px) saturate(1.65);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .navbar-inner {

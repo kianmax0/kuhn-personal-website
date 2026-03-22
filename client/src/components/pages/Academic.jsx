@@ -1,6 +1,68 @@
 import React from "react";
 import "./Academic.css";
 
+const selfStudyCourses = [
+  {
+    title: "CS188 — Introduction to Artificial Intelligence",
+    platform: "UC Berkeley",
+  },
+  {
+    title: "CS189 — Introduction to Machine Learning",
+    platform: "UC Berkeley",
+  },
+  {
+    title: "DATA100 — Principles and Techniques of Data Science",
+    platform: "UC Berkeley",
+  },
+  {
+    title: "hello-algo — Algorithms & data structures",
+    platform: "Self-study / online",
+  },
+  {
+    title: "MIT Missing Semester",
+    platform: "MIT",
+  },
+  {
+    title: "MIT Web Development Crash Course",
+    platform: "MIT",
+  },
+  {
+    title: "Computational Neuroscience (NMACN)",
+    platform: "Neuromatch Academy",
+  },
+  {
+    title: "Deep Learning (NMADL)",
+    platform: "Neuromatch Academy",
+  },
+  {
+    title: "AI (NMAAI)",
+    platform: "Neuromatch Academy",
+  },
+];
+
+const readingBooks = [
+  {
+    title: "Neural Data Science",
+    author: "Eric L. Nylen & Pascal Wallisch",
+  },
+  {
+    title: "Mathematics for Machine Learning",
+    author: "Marc Peter Deisenroth, A. Aldo Faisal & Cheng Soon Ong",
+  },
+  {
+    title: "Theoretical Neuroscience: Understanding Cognition",
+    author: "Xiao-Jing Wang",
+  },
+  {
+    title: "Principles of Neurobiology",
+    author: "Liqun Luo",
+  },
+  {
+    title: "Roitt's Essential Immunology",
+    author: "Ivan M. Roitt",
+  },
+];
+
 const Academic = () => {
   return (
     <div className="academic-page animated-grid-background">
@@ -225,6 +287,48 @@ const Academic = () => {
                 UC Berkeley - Department of Molecular and Cell Biology (MCB)
               </p>
               <p>Visiting student program in Molecular and Cell Biology</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      {/* Self-directed learning: courses & reading */}
+      <section
+        className="publications-section home-section section-animate"
+        style={{ animationDelay: "1s" }}
+      >
+        <div className="section-container">
+          <h2>📖 Self-directed learning</h2>
+          <p className="section-subtitle">
+            Self-study courses and books outside my formal curriculum.
+          </p>
+          <div className="articles-list articles-spaced">
+            <article className="article-card">
+              <h3>🧑‍💻 Self-taught courses</h3>
+              <ul className="self-study-list">
+                {selfStudyCourses.map((course, index) => (
+                  <li key={`course-${index}`}>
+                    <span className="self-study-item-title">{course.title}</span>
+                    <span className="self-study-item-meta">
+                      {course.platform}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </article>
+            <article className="article-card">
+              <h3>📚 Books I&apos;ve read</h3>
+              <ul className="self-study-list">
+                {readingBooks.map((book, index) => (
+                  <li key={`book-${index}`}>
+                    <span className="self-study-item-title">{book.title}</span>
+                    <span className="self-study-item-author">{book.author}</span>
+                    {book.note ? (
+                      <p className="self-study-item-note">{book.note}</p>
+                    ) : null}
+                  </li>
+                ))}
+              </ul>
             </article>
           </div>
         </div>

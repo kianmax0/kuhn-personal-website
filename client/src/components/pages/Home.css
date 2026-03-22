@@ -48,6 +48,11 @@
   line-height: 1.1;
   margin: 0 0 20px;
   transition: color 0.3s ease;
+  color: var(--text-primary);
+  background: none;
+  -webkit-background-clip: unset;
+  background-clip: unset;
+  -webkit-text-fill-color: unset;
 }
 .hero-tagline {
   font-size: 1.2rem;
