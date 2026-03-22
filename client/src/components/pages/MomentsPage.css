@@ -650,15 +650,6 @@
   transform: translateZ(0);
 }
 
-/* Performance optimizations */
-.moment-post {
-  contain: layout style paint;
-}
-
-.moments-feed {
-  contain: layout;
-}
-
 /* Reduced Motion for better performance */
 @media (prefers-reduced-motion: reduce) {
   .moment-post,

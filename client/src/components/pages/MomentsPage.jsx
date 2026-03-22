@@ -85,7 +85,7 @@ const MomentsPage = () => {
   }, [selectedGridImage, currentGridIndex, allGridImages]);
 
   // 初始化点击计数
-  useMemo(() => {
+  useEffect(() => {
     const initialCounts = {};
     momentsData.forEach((moment) => {
       initialCounts[moment.id] = 0;

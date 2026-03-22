@@ -23,11 +23,11 @@ html[data-theme="light"] {
   --navbar-bg: linear-gradient(90deg, #f0f0f0 0%, #e5e5e5 50%, #f0f0f0 100%);
   --navbar-glass-bg: linear-gradient(
     180deg,
-    rgba(255, 255, 255, 0.78) 0%,
-    rgba(245, 246, 250, 0.68) 100%
+    rgba(232, 234, 238, 0.52) 0%,
+    rgba(220, 222, 228, 0.4) 100%
   );
-  --navbar-glass-border: rgba(0, 0, 0, 0.09);
-  --navbar-glass-shadow: 0 4px 28px rgba(0, 0, 0, 0.07);
+  --navbar-glass-border: rgba(0, 0, 0, 0.06);
+  --navbar-glass-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
   --navbar-text: #333;
   --navbar-link: #666;
   --border-color: #e0e0e0;
@@ -49,11 +49,11 @@ html:not([data-theme]) {
   --navbar-bg: linear-gradient(90deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
   --navbar-glass-bg: linear-gradient(
     180deg,
-    rgba(28, 28, 32, 0.78) 0%,
-    rgba(12, 12, 16, 0.68) 100%
+    rgba(20, 20, 24, 0.62) 0%,
+    rgba(10, 10, 12, 0.55) 100%
   );
-  --navbar-glass-border: rgba(255, 255, 255, 0.1);
-  --navbar-glass-shadow: 0 4px 32px rgba(0, 0, 0, 0.45);
+  --navbar-glass-border: rgba(255, 255, 255, 0.06);
+  --navbar-glass-shadow: 0 2px 24px rgba(0, 0, 0, 0.38);
   --navbar-text: #ffffff;
   --navbar-link: #d0d0d0;
   --border-color: #404040;
@@ -137,8 +137,8 @@ main {
   z-index: 1000;
   border-bottom: 1px solid var(--navbar-glass-border);
   box-shadow: var(--navbar-glass-shadow);
-  -webkit-backdrop-filter: blur(20px) saturate(1.65);
-  backdrop-filter: blur(20px) saturate(1.65);
+  -webkit-backdrop-filter: blur(22px) saturate(1.05);
+  backdrop-filter: blur(22px) saturate(1.05);
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
