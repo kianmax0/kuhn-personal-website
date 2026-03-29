@@ -156,6 +156,9 @@ const Home = () => {
           <Link to="/academic" className="section-link">
             View Academic & Professional →
           </Link>
+          <Link to="/resources" className="section-link">
+            Learning Resources →
+          </Link>
         </div>
       </section>
 

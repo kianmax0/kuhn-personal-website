@@ -21,8 +21,16 @@ function spaFallback404() {
   };
 }
 
-// GitHub Project Pages: https://<user>.github.io/<repo>/
+/** Production base: BASE_PATH env, or default GitHub Project Pages subpath */
+function productionBase() {
+  const p = process.env.BASE_PATH;
+  if (p === "/" || p === "") return "/";
+  if (p) return p.endsWith("/") ? p : `${p}/`;
+  return "/kuhn-personal-website/";
+}
+
+// Custom domain (BASE_PATH=/): root. GitHub Pages project site: default subpath.
 export default defineConfig(({ mode }) => ({
   plugins: [react(), spaFallback404()],
-  base: mode === "production" ? "/kuhn-personal-website/" : "/",
+  base: mode === "production" ? productionBase() : "/",
 }));
