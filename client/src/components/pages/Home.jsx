@@ -2,6 +2,7 @@ import React from "react";
 import GithubIcon from "../assets/GithubIcon";
 import { Link } from "react-router-dom";
 import MomentsFeed from "../modules/MomentsFeed";
+import BlogFeed from "../modules/BlogFeed";
 import "./Home.css";
 
 const articles = [
@@ -158,6 +159,20 @@ const Home = () => {
           </Link>
           <Link to="/resources" className="section-link">
             Learning Resources →
+          </Link>
+        </div>
+      </section>
+
+      {/* ===== Blog Section ===== */}
+      <section className="home-section blog-section">
+        <div className="section-container">
+          <h2>Blog</h2>
+          <p className="section-subtitle">
+            Long-form notes and derivations.
+          </p>
+          <BlogFeed />
+          <Link to="/blog" className="section-link">
+            View All Posts →
           </Link>
         </div>
       </section>

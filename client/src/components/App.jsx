@@ -8,6 +8,8 @@ import MomentsPage from "./pages/MomentsPage";
 import Academic from "./pages/Academic";
 import Resources from "./pages/Resources";
 import Contact from "./pages/Contact";
+import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 
 // Inline Footer component (simplified)
 const Footer = () => (
@@ -30,6 +32,8 @@ const App = () => {
           <Route path="/moments" element={<MomentsPage />} />
           <Route path="/academic" element={<Academic />} />
           <Route path="/resources" element={<Resources />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
