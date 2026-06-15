@@ -50,65 +50,65 @@ const Home = () => {
           <h2>About Me</h2>
           <div className="about-content">
             <div className="about-block">
-              <h3>1. My "Official" Title 📜</h3>
+              <h3>🎓 Who I Am</h3>
               <p>
-                On paper? I'm a third-year Bioscience student at Westlake
+                On paper, I&apos;m a third-year Bioscience student at Westlake
                 University.
               </p>
               <p>
-                But my real obsession? I&apos;m studying social need—what the
-                brain treats as socially relevant—and how that information is
-                encoded in the medial preoptic nucleus (MPN), a hypothalamic hub
-                that helps orchestrate social and motivational behavior.
-              </p>
-              <p>
-                In short: I want to know how need-like social signals get
-                represented in neural activity—and what that tells us about how
-                brains navigate belonging, conflict, and everything in between.
+                Off paper, I&apos;m a neuroscience-obsessed generalist who likes
+                asking why brains do what they do—and then trying to model it.
               </p>
             </div>
             <div className="about-block">
-              <h3>2. My Brain's Other Tabs 🖥️</h3>
+              <h3>🧠 What I&apos;m Researching</h3>
               <p>
-                My brain refuses to stick to one major. It currently has way too
-                many tabs open...
+                Right now I study how the hypothalamic{" "}
+                <strong>medial preoptic nucleus (MPN)</strong> computes{" "}
+                <strong>Social Need</strong>—how the brain quantifies the drive
+                for social contact and turns it into motivated behavior.
               </p>
               <p>
-                One minute it's Neuroscience ("How does the brain decide what's
-                for dinner?"), the next it's Computer Science ("Can I code a bot
-                to attend this lecture for me?"), and occasionally it wanders
-                into Finance ("How to... well, you get the idea 😉").
+                In short: I want to know how a need-like social signal gets
+                represented in neural activity, and what that tells us about
+                belonging, motivation, and everything in between.
               </p>
             </div>
             <div className="about-block">
-              <h3>3. How I Recharge 🔋</h3>
+              <h3>🖥️ My Other Open Tabs</h3>
+              <p>
+                My brain refuses to stick to one major—it always has too many
+                tabs open.
+              </p>
+              <p>
+                One minute it&apos;s Neuroscience (&quot;How does the brain
+                decide what&apos;s for dinner?&quot;), the next it&apos;s
+                Computer Science (&quot;Can I code a bot to attend this lecture
+                for me?&quot;), and occasionally it wanders into Finance
+                (&quot;How to... well, you get the idea&quot;).
+              </p>
+            </div>
+            <div className="about-block">
+              <h3>🔋 How I Recharge</h3>
               <ul className="interests-list">
+                <li>Staging epic mental battles over a Go board ⚫⚪️.</li>
+                <li>Learning all kinds of things from books.</li>
+                <li>Exploring new digital worlds while gaming 🎮.</li>
                 <li>
-                  Staging epic mental battles over a Go board ⚫⚪️ (or at
-                  least, they're epic in my head).
-                </li>
-                <li>Learning all kinds of knowledges in books.</li>
-                <li>
-                  Exploring new digital worlds (and probably shouting at my
-                  screen) while playing games 🎮
-                </li>
-                <li>
-                  Finally remembering to move my body with some sports —whether
-                  it's badminton, basketball, some cardio, skiing, or just...
+                  Moving my body—badminton, basketball, cardio, skiing, or just
                   existing. Anything counts!
                 </li>
               </ul>
             </div>
-            <div className="about-block">
-              <h3>4. The Plot Twist? 🎬</h3>
-              <p>
-                So, what's the grand plan? Will I be a brain-researching
-                programmer? A Go-playing financial analyst? Honestly, your guess
-                is as good as mine. I’m still exploring the plot. 🤷
-              </p>
-              <p className="plot-twist-note">Consider this just the trailer.</p>
-            </div>
           </div>
+          <p className="about-closer">
+            So what&apos;s the grand plan? A brain-researching programmer? A
+            Go-playing analyst? Honestly, your guess is as good as mine—I&apos;m
+            still exploring the plot. 🤷{" "}
+            <span className="plot-twist-note">
+              Consider this just the trailer.
+            </span>
+          </p>
           <Link to="/about" className="section-link">
             View Full Profile →
           </Link>
@@ -167,9 +167,7 @@ const Home = () => {
       <section className="home-section blog-section">
         <div className="section-container">
           <h2>Blog</h2>
-          <p className="section-subtitle">
-            Long-form notes and derivations.
-          </p>
+          <p className="section-subtitle">Long-form notes and derivations.</p>
           <BlogFeed />
           <Link to="/blog" className="section-link">
             View All Posts →

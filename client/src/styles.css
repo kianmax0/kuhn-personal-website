@@ -21,15 +21,18 @@ html[data-theme="light"] {
   --text-secondary: #555;
   --text-tertiary: #999;
   --navbar-bg: linear-gradient(90deg, #f0f0f0 0%, #e5e5e5 50%, #f0f0f0 100%);
+  /* Light page -> inverted (dark) navbar for contrast */
   --navbar-glass-bg: linear-gradient(
     180deg,
-    rgba(232, 234, 238, 0.52) 0%,
-    rgba(220, 222, 228, 0.4) 100%
+    rgba(18, 18, 22, 0.85) 0%,
+    rgba(8, 8, 10, 0.8) 100%
   );
-  --navbar-glass-border: rgba(0, 0, 0, 0.06);
-  --navbar-glass-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
-  --navbar-text: #333;
+  --navbar-glass-border: rgba(255, 255, 255, 0.1);
+  --navbar-glass-shadow: 0 2px 22px rgba(0, 0, 0, 0.28);
+  --navbar-text: #ffffff;
   --navbar-link: #666;
+  --nav-link: rgba(255, 255, 255, 0.78);
+  --nav-link-hover: #ffffff;
   --border-color: #e0e0e0;
   --hero-bg: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
   --grid-color: rgba(128, 128, 128, 0.15);
@@ -47,15 +50,18 @@ html:not([data-theme]) {
   --text-secondary: #d0d0d0;
   --text-tertiary: #a0a0a0;
   --navbar-bg: linear-gradient(90deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+  /* Navbar stays dark in both themes */
   --navbar-glass-bg: linear-gradient(
     180deg,
-    rgba(20, 20, 24, 0.62) 0%,
-    rgba(10, 10, 12, 0.55) 100%
+    rgba(16, 16, 20, 0.92) 0%,
+    rgba(6, 6, 8, 0.88) 100%
   );
-  --navbar-glass-border: rgba(255, 255, 255, 0.06);
-  --navbar-glass-shadow: 0 2px 24px rgba(0, 0, 0, 0.38);
+  --navbar-glass-border: rgba(255, 255, 255, 0.1);
+  --navbar-glass-shadow: 0 2px 24px rgba(0, 0, 0, 0.4);
   --navbar-text: #ffffff;
   --navbar-link: #d0d0d0;
+  --nav-link: rgba(255, 255, 255, 0.78);
+  --nav-link-hover: #ffffff;
   --border-color: #404040;
   --hero-bg: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #0f0f0f 100%);
   --grid-color: rgba(128, 128, 128, 0.1);
@@ -142,6 +148,25 @@ main {
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Explicit per-theme inversion so the bar is the opposite of the page bg */
+html[data-theme="light"] .navbar {
+  background: linear-gradient(
+    180deg,
+    rgba(16, 16, 20, 0.92) 0%,
+    rgba(6, 6, 8, 0.88) 100%
+  );
+  border-bottom-color: rgba(255, 255, 255, 0.12);
+}
+html[data-theme="dark"] .navbar,
+html:not([data-theme]) .navbar {
+  background: linear-gradient(
+    180deg,
+    rgba(16, 16, 20, 0.92) 0%,
+    rgba(6, 6, 8, 0.88) 100%
+  );
+  border-bottom-color: rgba(255, 255, 255, 0.12);
+}
+
 .navbar-inner {
   max-width: 960px;
   margin: 0 auto;
@@ -201,7 +226,7 @@ main {
 }
 
 .navbar-logo:hover {
-  color: var(--text-primary);
+  color: var(--nav-link-hover);
 }
 
 .navbar-menu {
@@ -213,7 +238,7 @@ main {
 }
 
 .navbar-link {
-  color: var(--navbar-link);
+  color: var(--nav-link);
   text-decoration: none;
   font-size: 14px;
   font-weight: 500;
@@ -228,12 +253,12 @@ main {
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, #000000, #333333);
+  background: currentColor;
   transition: width 0.3s ease;
 }
 
 .navbar-link:hover {
-  color: var(--text-primary);
+  color: var(--nav-link-hover);
 }
 
 .navbar-link:hover::after {
@@ -243,7 +268,7 @@ main {
 /* Theme Toggle Button */
 .theme-toggle {
   background: transparent;
-  border: 2px solid var(--navbar-link);
+  border: 2px solid var(--nav-link);
   border-radius: 50%;
   width: 36px;
   height: 36px;
@@ -257,7 +282,7 @@ main {
 }
 
 .theme-toggle:hover {
-  border-color: var(--text-primary);
+  border-color: var(--nav-link-hover);
   transform: scale(1.1) rotate(20deg);
 }
 

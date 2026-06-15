@@ -112,21 +112,41 @@
 /* About content grid */
 .about-content {
   display: grid;
-  gap: 40px 48px;
+  gap: 28px;
   grid-template-columns: repeat(2, minmax(280px, 1fr));
-  align-items: start;
+  align-items: stretch;
 }
 @media (max-width: 860px) {
   .about-content {
     grid-template-columns: 1fr;
-    gap: 36px;
+    gap: 22px;
   }
 }
+
+/* Plain blocks rendered directly on the page background (no card chrome) */
+.about-block {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
 .about-block h3 {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   margin: 0 0 14px;
   line-height: 1.35;
-  animation: breathe 4s ease-in-out infinite;
+  transition: color 0.3s ease;
+}
+
+/* Full-width closing line below the card grid */
+.about-closer {
+  margin: 44px auto 0;
+  padding-top: 28px;
+  max-width: 70ch;
+  text-align: center;
+  line-height: 1.65;
+  font-size: 1.02rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  opacity: 0;
+  animation: fadeIn 0.9s ease-out 1s forwards;
   transition: color 0.3s ease;
 }
 
@@ -143,10 +163,13 @@
   margin: 0 0 14px;
   line-height: 1.6;
   font-size: 1rem;
-  max-width: 60ch;
+  max-width: none;
   opacity: 0;
   animation: fadeInUp 0.8s ease-out forwards;
   transition: color 0.3s ease;
+}
+.about-block > :last-child {
+  margin-bottom: 0;
 }
 
 .about-block:nth-child(1) p {
@@ -1223,8 +1246,13 @@ body {
 [data-theme="dark"] .about-block h3 {
   color: #f1f3f4;
 }
-[data-theme="dark"] .about-block p {
+[data-theme="dark"] .about-block p,
+[data-theme="dark"] .about-closer,
+[data-theme="dark"] .interests-list {
   color: #e5e7eb;
+}
+[data-theme="dark"] .about-closer {
+  border-top-color: rgba(255, 255, 255, 0.12);
 }
 
 /* Publications section dark theme */

@@ -1,65 +1,106 @@
 import React from "react";
 import "./Academic.css";
 
-const selfStudyCourses = [
+const publications = [
   {
-    title: "CS188 — Introduction to Artificial Intelligence",
-    platform: "UC Berkeley",
-  },
-  {
-    title: "CS189 — Introduction to Machine Learning",
-    platform: "UC Berkeley",
-  },
-  {
-    title: "DATA100 — Principles and Techniques of Data Science",
-    platform: "UC Berkeley",
-  },
-  {
-    title: "hello-algo — Algorithms & data structures",
-    platform: "Self-study / online",
-  },
-  {
-    title: "MIT Missing Semester",
-    platform: "MIT",
-  },
-  {
-    title: "MIT Web Development Crash Course",
-    platform: "MIT",
-  },
-  {
-    title: "Computational Neuroscience (NMACN)",
-    platform: "Neuromatch Academy",
-  },
-  {
-    title: "Deep Learning (NMADL)",
-    platform: "Neuromatch Academy",
-  },
-  {
-    title: "AI (NMAAI)",
-    platform: "Neuromatch Academy",
+    date: "Nov 21, 2025",
+    status: "published",
+    statusText: "Published",
+    title: "Visualizing genetic information flow in Space and Time",
+    journal: "Science China Life Sciences",
+    abstract:
+      "This review synthesizes the historical development, underlying principles, and technical implementations of dynamic DNA and RNA imaging approaches, comparing their capabilities, limitations, and optimal applications.",
+    doi: "https://doi.org/10.1007/s11427-025-3158-6",
   },
 ];
 
-const readingBooks = [
+const awards = [
   {
-    title: "Neural Data Science",
-    author: "Eric L. Nylen & Pascal Wallisch",
+    year: "2025",
+    title: "🏛️ Zhejiang Provincial Government Scholarship",
+    issuer: "Zhejiang Provincial Government",
+    description:
+      "Recognizing outstanding academic performance and comprehensive quality.",
   },
   {
-    title: "Mathematics for Machine Learning",
-    author: "Marc Peter Deisenroth, A. Aldo Faisal & Cheng Soon Ong",
+    year: "2025",
+    title: "🏅 Westlake University Dean's Medal",
+    issuer: "Westlake University",
+    description:
+      "Highest student honor medal personally awarded by the Dean.",
   },
   {
-    title: "Theoretical Neuroscience: Understanding Cognition",
-    author: "Xiao-Jing Wang",
+    year: "2025",
+    title: "💡 Westlake University Learning Innovation Award",
+    issuer: "Westlake University",
+    description:
+      "Recognition for innovative learning approaches and academic excellence.",
   },
   {
-    title: "Principles of Neurobiology",
-    author: "Liqun Luo",
+    year: "2024",
+    title: "🥈 iGEM Silver Medal",
+    issuer: "International Genetically Engineered Machine Competition",
+    description: "Silver medal in premier synthetic biology competition.",
   },
   {
-    title: "Roitt's Essential Immunology",
-    author: "Ivan M. Roitt",
+    year: "2024",
+    title: "💡 Westlake University Learning Innovation Award",
+    issuer: "Westlake University",
+    description:
+      "Recognition for innovative learning approaches and academic excellence.",
+  },
+  {
+    year: "2024",
+    title: "🤝 Westlake University Social Responsibility Award",
+    issuer: "Westlake University",
+    description:
+      "Awarded for outstanding contributions to social responsibility and community service.",
+  },
+  {
+    year: "2024",
+    title: "🎓 Westlake University Third-Class Scholarship",
+    issuer: "Westlake University",
+    description:
+      "Academic excellence scholarship for outstanding academic performance.",
+  },
+];
+
+const experiences = [
+  {
+    period: "2025 - Present",
+    role: "🔬 Undergraduate Research Student",
+    lab: "Westlake University - Liu Ding Lab (Social Neural Networks Laboratory)",
+    description:
+      "Conducting research in the Social Neural Networks Laboratory under Prof. Liu Ding. The lab studies the neural basis of social instinctive behaviors—how social behaviors are represented and processed in the brain—and the principles of neural network dynamics, including social homeostasis, touch in social behavior, and the mechanisms underlying social needs and loneliness.",
+  },
+  {
+    period: "2024 - 2025",
+    role: "🔬 Undergraduate Research Student",
+    lab: "Westlake University - Ma Qiufu Lab (Systems Physiology and Bioelectronic Medicine)",
+    description:
+      "Worked on systems physiology and acupuncture mechanisms under Prof. Ma Qiufu. Learned about pain pathways, neural-immune-target tissue interactions, and the scientific basis of traditional medicine through electroacupuncture studies.",
+  },
+  {
+    period: "2023 - 2024",
+    role: "🔬 Undergraduate Research Student",
+    lab: "Westlake University - Wan Yihan Lab (Single-molecule Dynamic Transcriptomics Systems Biology)",
+    description:
+      "Participated in cutting-edge single-cell and single-molecule live cell imaging research under Prof. Wan Yihan. Gained experience in dynamic nascent RNA imaging projects and explored transcription dynamics at the molecular level.",
+  },
+];
+
+const education = [
+  {
+    period: "2023 - Present",
+    degree: "📖 Bachelor of Science",
+    school: "Westlake University - School of Life Sciences",
+    description: "Major: Biology",
+  },
+  {
+    period: "2025",
+    degree: "🌍 Visiting Student",
+    school: "UC Berkeley - Department of Molecular and Cell Biology (MCB)",
+    description: "Visiting student program in Molecular and Cell Biology",
   },
 ];
 
@@ -84,35 +125,39 @@ const Academic = () => {
         <div className="section-container">
           <h2>📚 Publications</h2>
           <p className="section-subtitle">My published research work.</p>
-          <div className="articles-list articles-spaced">
-            <article className="article-card">
-              <div className="publication-status">
-                <span className="status-badge published">✅ Published</span>
-              </div>
-              <h3>Visualizing genetic information flow in Space and Time</h3>
-              <p className="article-date">Nov 21, 2025</p>
-              <p className="article-journal">Science China Life Sciences</p>
-              <p>
-                This review synthesizes the historical development, underlying
-                principles, and technical implementations of dynamic DNA and RNA
-                imaging approaches, comparing their capabilities, limitations,
-                and optimal applications.
-              </p>
-              <a
-                href="https://doi.org/10.1007/s11427-025-3158-6"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="article-doi-link"
-                style={{
-                  color: "#166534",
-                  fontWeight: 600,
-                  wordBreak: "break-all",
-                }}
-              >
-                DOI: https://doi.org/10.1007/s11427-025-3158-6
-              </a>
-            </article>
-          </div>
+          <ul className="awards-row-list">
+            {publications.map((pub, index) => (
+              <li className="award-row exp-row" key={`pub-${index}`}>
+                <span className="award-row-year exp-row-period">{pub.date}</span>
+                <div className="award-row-main">
+                  <h3 className="award-row-title">
+                    {pub.title}
+                    {pub.status && (
+                      <span className={`status-badge ${pub.status}`}>
+                        ✅ {pub.statusText}
+                      </span>
+                    )}
+                  </h3>
+                  {pub.journal && (
+                    <p className="award-row-issuer">{pub.journal}</p>
+                  )}
+                  {pub.abstract && (
+                    <p className="award-row-desc">{pub.abstract}</p>
+                  )}
+                  {pub.doi && (
+                    <a
+                      href={pub.doi}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="award-row-doi"
+                    >
+                      DOI: {pub.doi}
+                    </a>
+                  )}
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
@@ -126,73 +171,20 @@ const Academic = () => {
           <p className="section-subtitle">
             Honors and achievements in academics and research.
           </p>
-          <div className="articles-list articles-spaced">
-            <article className="article-card">
-              <h3>🏛️ Zhejiang Provincial Government Scholarship</h3>
-              <p className="article-date">2025</p>
-              <p className="article-journal">Zhejiang Provincial Government</p>
-              <p>
-                Recognizing outstanding academic performance and comprehensive
-                quality
-              </p>
-            </article>
-
-            <article className="article-card">
-              <h3>🏅 Westlake University Dean's Medal</h3>
-              <p className="article-date">2025</p>
-              <p className="article-journal">Westlake University</p>
-              <p>Highest student honor medal personally awarded by the Dean</p>
-            </article>
-
-            <article className="article-card">
-              <h3>💡 Westlake University Learning Innovation Award</h3>
-              <p className="article-date">2025</p>
-              <p className="article-journal">Westlake University</p>
-              <p>
-                Recognition for innovative learning approaches and academic
-                excellence
-              </p>
-            </article>
-
-            <article className="article-card">
-              <h3>🥈 iGEM Silver Medal</h3>
-              <p className="article-date">2024</p>
-              <p className="article-journal">
-                International Genetically Engineered Machine Competition
-              </p>
-              <p>Silver medal in premier synthetic biology competition</p>
-            </article>
-
-            <article className="article-card">
-              <h3>💡 Westlake University Learning Innovation Award</h3>
-              <p className="article-date">2024</p>
-              <p className="article-journal">Westlake University</p>
-              <p>
-                Recognition for innovative learning approaches and academic
-                excellence
-              </p>
-            </article>
-
-            <article className="article-card">
-              <h3>🤝 Westlake University Social Responsibility Award</h3>
-              <p className="article-date">2024</p>
-              <p className="article-journal">Westlake University</p>
-              <p>
-                Awarded for outstanding contributions to social responsibility
-                and community service
-              </p>
-            </article>
-
-            <article className="article-card">
-              <h3>🎓 Westlake University Third-Class Scholarship</h3>
-              <p className="article-date">2024</p>
-              <p className="article-journal">Westlake University</p>
-              <p>
-                Academic excellence scholarship for outstanding academic
-                performance
-              </p>
-            </article>
-          </div>
+          <ul className="awards-row-list">
+            {awards.map((award, index) => (
+              <li className="award-row" key={`award-${index}`}>
+                <span className="award-row-year">{award.year}</span>
+                <div className="award-row-main">
+                  <h3 className="award-row-title">{award.title}</h3>
+                  <p className="award-row-issuer">{award.issuer}</p>
+                  {award.description && (
+                    <p className="award-row-desc">{award.description}</p>
+                  )}
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
@@ -206,57 +198,22 @@ const Academic = () => {
           <p className="section-subtitle">
             My research journey and laboratory experience.
           </p>
-          <div className="articles-list articles-spaced">
-            <article className="article-card">
-              <h3>🔬 Undergraduate Research Student</h3>
-              <p className="article-date">2025 - Present</p>
-              <p className="article-journal">
-                Westlake University - Liu Ding Lab (Social Neural Networks
-                Laboratory)
-              </p>
-              <p>
-                Currently conducting research in the Social Neural Networks
-                Laboratory under Prof. Liu Ding's guidance. The lab focuses on
-                understanding the neural basis of social instinctive behaviors,
-                exploring how social behaviors are represented and processed in
-                the brain, and investigating the fundamental principles of
-                neural network dynamics. Research areas include social
-                homeostasis, touch sensation in social behavior, and the neural
-                mechanisms underlying social needs and loneliness.
-              </p>
-            </article>
-
-            <article className="article-card">
-              <h3>🔬 Undergraduate Research Student</h3>
-              <p className="article-date">2024 - 2025</p>
-              <p className="article-journal">
-                Westlake University - Ma Qiufu Lab (Systems Physiology and
-                Bioelectronic Medicine)
-              </p>
-              <p>
-                Participated in research on systems physiology and acupuncture
-                mechanisms under Prof. Ma Qiufu's guidance. Learning about pain
-                pathways, neural-immune-target tissue interactions, and the
-                scientific basis of traditional medicine through
-                electroacupuncture studies.
-              </p>
-            </article>
-
-            <article className="article-card">
-              <h3>🔬 Undergraduate Research Student</h3>
-              <p className="article-date">2023 - 2024</p>
-              <p className="article-journal">
-                Westlake University - Wan Yihan Lab (Single-molecule Dynamic
-                Transcriptomics Systems Biology)
-              </p>
-              <p>
-                Participated in cutting-edge single-cell and single-molecule
-                live cell imaging research under Prof. Wan Yihan's supervision.
-                Gained experience in dynamic nascent RNA imaging projects and
-                explored transcription dynamics at the molecular level.
-              </p>
-            </article>
-          </div>
+          <ul className="awards-row-list">
+            {experiences.map((exp, index) => (
+              <li className="award-row exp-row" key={`exp-${index}`}>
+                <span className="award-row-year exp-row-period">
+                  {exp.period}
+                </span>
+                <div className="award-row-main">
+                  <h3 className="award-row-title">{exp.role}</h3>
+                  <p className="award-row-issuer">{exp.lab}</p>
+                  {exp.description && (
+                    <p className="award-row-desc">{exp.description}</p>
+                  )}
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
@@ -270,67 +227,22 @@ const Academic = () => {
           <p className="section-subtitle">
             My academic background and educational journey.
           </p>
-          <div className="articles-list articles-spaced">
-            <article className="article-card">
-              <h3>📖 Bachelor of Science</h3>
-              <p className="article-date">2023 - Present</p>
-              <p className="article-journal">
-                Westlake University - School of Life Sciences
-              </p>
-              <p>Major: Biology</p>
-            </article>
-
-            <article className="article-card">
-              <h3>🌍 Visiting Student</h3>
-              <p className="article-date">2025</p>
-              <p className="article-journal">
-                UC Berkeley - Department of Molecular and Cell Biology (MCB)
-              </p>
-              <p>Visiting student program in Molecular and Cell Biology</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      {/* Self-directed learning: courses & reading */}
-      <section
-        className="publications-section home-section section-animate"
-        style={{ animationDelay: "1s" }}
-      >
-        <div className="section-container">
-          <h2>📖 Self-directed learning</h2>
-          <p className="section-subtitle">
-            Self-study courses and books outside my formal curriculum.
-          </p>
-          <div className="articles-list articles-spaced">
-            <article className="article-card">
-              <h3>🧑‍💻 Self-taught courses</h3>
-              <ul className="self-study-list">
-                {selfStudyCourses.map((course, index) => (
-                  <li key={`course-${index}`}>
-                    <span className="self-study-item-title">{course.title}</span>
-                    <span className="self-study-item-meta">
-                      {course.platform}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </article>
-            <article className="article-card">
-              <h3>📚 Books I&apos;ve read</h3>
-              <ul className="self-study-list">
-                {readingBooks.map((book, index) => (
-                  <li key={`book-${index}`}>
-                    <span className="self-study-item-title">{book.title}</span>
-                    <span className="self-study-item-author">{book.author}</span>
-                    {book.note ? (
-                      <p className="self-study-item-note">{book.note}</p>
-                    ) : null}
-                  </li>
-                ))}
-              </ul>
-            </article>
-          </div>
+          <ul className="awards-row-list">
+            {education.map((edu, index) => (
+              <li className="award-row exp-row" key={`edu-${index}`}>
+                <span className="award-row-year exp-row-period">
+                  {edu.period}
+                </span>
+                <div className="award-row-main">
+                  <h3 className="award-row-title">{edu.degree}</h3>
+                  <p className="award-row-issuer">{edu.school}</p>
+                  {edu.description && (
+                    <p className="award-row-desc">{edu.description}</p>
+                  )}
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
     </div>

@@ -15,7 +15,7 @@ import BlogPost from "./pages/BlogPost";
 const Footer = () => (
   <footer className="footer">
     <div className="footer-content">
-      <p>&copy; 2025 Kuhn. All rights reserved.</p>
+      <p>&copy; 2026 Kuhn. All rights reserved.</p>
     </div>
   </footer>
 );

@@ -385,7 +385,7 @@ const About = () => {
               <dd>∞ TB (mostly useless knowledge + stackoverflow solutions)</dd>
 
               <dt>🎮 Graphics:</dt>
-              <dd>Imagination GTX 5090 (performance drops after 10pm)</dd>
+              <dd>Imagination RTX 5090 (performance drops after 10pm)</dd>
 
               <dt>⚡ Power Supply:</dt>
               <dd>Coffee-X 850W 80+ Caffeine (never fails at 3AM)</dd>

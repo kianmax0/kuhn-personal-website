@@ -78,90 +78,101 @@
   border: 1px solid #fcd34d;
 }
 
-/* Awards Section */
-.awards-list {
+/* Awards Section — row-by-row list */
+.awards-row-list {
+  list-style: none;
+  margin: 2rem 0 0;
+  padding: 0;
+  border-top: 1px solid var(--border-color);
+}
+
+.award-row {
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  gap: 1.75rem;
+  padding: 1.25rem 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+  transition: background 0.25s ease;
 }
 
-.award-item {
-  display: flex;
-  gap: 2.5rem;
-  padding: 2rem;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid var(--border-color);
-  border-radius: 12px;
-  transition: all 0.3s ease;
+.award-row:hover {
+  background: rgba(128, 128, 128, 0.06);
 }
 
-.award-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-  border-color: rgba(100, 100, 100, 0.3);
-}
-
-.award-year {
-  font-size: 1rem;
+.award-row-year {
+  flex: 0 0 60px;
+  font-size: 0.95rem;
   font-weight: 700;
-  color: var(--text-primary);
-  min-width: 100px;
-  padding: 0.5rem 1rem;
-  background: transparent;
-  border-radius: 8px;
-  text-align: center;
-  border: none;
+  color: var(--text-secondary);
+  font-variant-numeric: tabular-nums;
+  padding-top: 0.1rem;
 }
 
-.award-content h4 {
-  font-size: 1.2rem;
+.award-row-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.award-row-title {
+  margin: 0;
+  font-size: 1.08rem;
   font-weight: 600;
+  line-height: 1.35;
   color: var(--text-primary);
-  margin-bottom: 0.5rem;
   display: flex;
-  align-items: center;
+  align-items: baseline;
+  flex-wrap: wrap;
   gap: 0.5rem;
 }
 
-.award-content p {
-  color: var(--text-secondary);
-  font-size: 0.95rem;
-  line-height: 1.4;
-  margin-bottom: 0.8rem;
+.award-row-doi {
+  display: inline-block;
+  margin-top: 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #2563eb;
+  text-decoration: none;
+  word-break: break-all;
 }
 
-.award-category {
-  display: inline-block;
-  padding: 0.3rem 0.8rem;
-  background: linear-gradient(
-    135deg,
-    rgba(0, 0, 0, 0.1),
-    rgba(100, 100, 100, 0.1)
-  );
-  border: 1px solid var(--border-color);
-  border-radius: 20px;
-  font-size: 0.8rem;
+.award-row-doi:hover {
+  text-decoration: underline;
+}
+
+[data-theme="dark"] .award-row-doi {
+  color: #93c5fd;
+}
+
+.award-row-issuer {
+  margin: 0.25rem 0 0;
+  font-size: 0.9rem;
   font-weight: 500;
   color: var(--text-secondary);
 }
 
-/* Specific award category colors */
-.award-category:contains("Provincial Scholarship") {
-  background: linear-gradient(135deg, #fef3c7, #fde68a);
-  color: #92400e;
-  border-color: #fcd34d;
+.award-row-desc {
+  margin: 0.35rem 0 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  opacity: 0.85;
 }
 
-.award-category:contains("Highest Honor") {
-  background: linear-gradient(135deg, #fde68a, #f59e0b);
-  color: #78350f;
-  border-color: #d97706;
+/* Wider left column for experience periods (e.g. "2025 - Present") */
+.exp-row-period {
+  flex-basis: 120px;
+  white-space: nowrap;
 }
 
-.award-category:contains("International Competition") {
-  background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
-  color: #3730a3;
-  border-color: #8b5cf6;
+@media (max-width: 768px) {
+  .award-row {
+    gap: 1rem;
+  }
+  .award-row-year {
+    flex-basis: 48px;
+  }
+  .exp-row-period {
+    flex-basis: auto;
+  }
 }
 
 /* Content Grid */
@@ -829,44 +840,3 @@
   }
 }
 
-/* Self-directed learning lists inside article cards */
-.academic-page .self-study-list {
-  margin: 0.75rem 0 0;
-  padding-left: 1.25rem;
-  list-style-type: disc;
-}
-
-.academic-page .self-study-list li {
-  margin-bottom: 0.85rem;
-}
-
-.academic-page .self-study-list li:last-child {
-  margin-bottom: 0;
-}
-
-.academic-page .self-study-item-title {
-  display: block;
-  font-weight: 600;
-  color: var(--text-primary);
-}
-
-.academic-page .self-study-item-meta {
-  display: block;
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  margin-top: 0.15rem;
-}
-
-.academic-page .self-study-item-author {
-  display: block;
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  margin-top: 0.15rem;
-}
-
-.academic-page .self-study-item-note {
-  margin: 0.35rem 0 0;
-  font-size: 0.875rem;
-  line-height: 1.5;
-  color: var(--text-secondary);
-}
