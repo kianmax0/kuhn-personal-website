@@ -102,6 +102,13 @@ const education = [
     school: "UC Berkeley - Department of Molecular and Cell Biology (MCB)",
     description: "Visiting student program in Molecular and Cell Biology",
   },
+  {
+    period: "2021 - 2023",
+    degree: "🏫 High School",
+    school: "Zhejiang Ningbo High School",
+    description:
+      "Admitted to Westlake University during the second year of high school.",
+  },
 ];
 
 const Academic = () => {
