@@ -23,9 +23,9 @@
   border-radius: 20px;
   padding: 2.5rem;
   margin-bottom: 2rem;
-  border: 3px solid var(--border-color, rgba(0, 0, 0, 0.1));
+  border: 2px solid #111111;
   backdrop-filter: blur(20px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  box-shadow: 7px 7px 0 rgba(17, 17, 17, 0.9);
 }
 
 .profile-info {
@@ -178,15 +178,15 @@
   background: var(--card-bg, rgba(255, 255, 255, 0.95));
   border-radius: 20px;
   overflow: hidden;
-  border: 3px solid var(--border-color, rgba(0, 0, 0, 0.1));
+  border: 2px solid #111111;
   backdrop-filter: blur(20px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  box-shadow: 7px 7px 0 rgba(17, 17, 17, 0.9);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .moment-post:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  transform: translate(-3px, -3px);
+  box-shadow: 11px 11px 0 rgba(17, 17, 17, 0.9);
 }
 
 .post-interactions {
@@ -254,14 +254,15 @@
   border-radius: 15px;
   overflow: hidden;
   background: var(--card-bg, rgba(255, 255, 255, 0.95));
-  border: 2px solid var(--border-color, rgba(0, 0, 0, 0.1));
+  border: 2px solid #111111;
+  box-shadow: 4px 4px 0 rgba(17, 17, 17, 0.9);
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .grid-item:hover {
-  transform: scale(1.03);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transform: translate(-2px, -2px);
+  box-shadow: 7px 7px 0 rgba(17, 17, 17, 0.9);
 }
 
 /* Grid images now use background-image for better filling */
@@ -376,8 +377,25 @@
 .dark .moment-post,
 .dark .grid-item {
   background: var(--card-bg-dark, rgba(255, 255, 255, 0.05));
-  border-color: var(--border-dark, rgba(255, 255, 255, 0.1));
+  border-color: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(20px);
+}
+
+.dark .profile-header,
+.dark .moment-post {
+  box-shadow: 7px 7px 0 rgba(255, 255, 255, 0.16);
+}
+
+.dark .grid-item {
+  box-shadow: 4px 4px 0 rgba(255, 255, 255, 0.16);
+}
+
+.dark .moment-post:hover {
+  box-shadow: 11px 11px 0 rgba(255, 255, 255, 0.22);
+}
+
+.dark .grid-item:hover {
+  box-shadow: 7px 7px 0 rgba(255, 255, 255, 0.22);
 }
 
 .dark .profile-name {
@@ -471,6 +489,14 @@
 .moments-page .moment-card:hover {
   transform: none;
   box-shadow: none;
+}
+
+/* Keep inner card transparent in dark mode so the post matches the profile card */
+[data-theme="dark"] .moments-page .moment-card,
+.moments-page.dark .moment-card {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 .moments-page .moment-header {

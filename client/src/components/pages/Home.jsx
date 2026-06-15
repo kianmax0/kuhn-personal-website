@@ -124,13 +124,13 @@ const Home = () => {
           </p>
           <div className="articles-list articles-spaced">
             {articles.map((article) => (
-              <article key={article.id} className="article-card">
+              <article key={article.id} className="article-card blog-feed-card">
                 <div className="publication-status">
                   <span className={`status-badge ${article.status}`}>
                     ✅ {article.statusText}
                   </span>
                 </div>
-                <h3>{article.title}</h3>
+                <h3 className="blog-card-title">{article.title}</h3>
                 <p className="article-date">{article.date}</p>
                 {article.journal && (
                   <p className="article-journal">{article.journal}</p>
@@ -156,9 +156,6 @@ const Home = () => {
           </div>
           <Link to="/academic" className="section-link">
             View Academic & Professional →
-          </Link>
-          <Link to="/resources" className="section-link">
-            Learning Resources →
           </Link>
         </div>
       </section>
