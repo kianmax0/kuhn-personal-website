@@ -1,3 +1,4 @@
+import girlfriendGraduated from "../assets/girlfriend_graduated.jpg";
 import kuhn040925 from "../assets/kuhn_040925.jpg";
 import skiing from "../assets/skiing.jpg";
 import selfie021025 from "../assets/selfie_021025.jpg";
@@ -199,6 +200,13 @@ export const momentsData = [
     text: "Die Luft der Freiheit weht",
     images: [stanford1, stanford2, stanford3, stanford4, stanford5, stanford6],
     location: "Stanford, CA",
+  },
+  {
+    id: 17,
+    timestamp: "Jun 15, 2026",
+    text: "Congrats to my girl on graduating 🎓🎉",
+    imageUrl: girlfriendGraduated,
+    location: "浙江中医药大学",
   },
 ];
 
