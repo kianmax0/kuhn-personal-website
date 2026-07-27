@@ -76,39 +76,32 @@ const Home = () => {
               </p>
             </div>
             <div className="about-block">
-              <h3>🖥️ My Other Open Tabs</h3>
+              <h3>🖥️ Adjacent Interests</h3>
               <p>
-                My brain refuses to stick to one major—it always has too many
-                tabs open.
+                Alongside neuroscience, I keep a steady interest in computer
+                science—building analysis pipelines, training models, and
+                turning experimental questions into computational ones.
               </p>
               <p>
-                One minute it&apos;s Neuroscience (&quot;How does the brain
-                decide what&apos;s for dinner?&quot;), the next it&apos;s
-                Computer Science (&quot;Can I code a bot to attend this lecture
-                for me?&quot;), and occasionally it wanders into Finance
-                (&quot;How to... well, you get the idea&quot;).
+                I like working where theory, data, and code meet: enough
+                mathematics to stay precise, enough engineering to ship
+                something useful.
               </p>
             </div>
             <div className="about-block">
               <h3>🔋 How I Recharge</h3>
               <ul className="interests-list">
-                <li>Staging epic mental battles over a Go board ⚫⚪️.</li>
-                <li>Learning all kinds of things from books.</li>
-                <li>Exploring new digital worlds while gaming 🎮.</li>
-                <li>
-                  Moving my body—badminton, basketball, cardio, skiing, or just
-                  existing. Anything counts!
-                </li>
+                <li>Playing Go ⚫⚪</li>
+                <li>Reading across science and beyond</li>
+                <li>Gaming and exploring digital worlds</li>
+                <li>Badminton, skiing, and other outdoor sports</li>
               </ul>
             </div>
           </div>
           <p className="about-closer">
-            So what&apos;s the grand plan? A brain-researching programmer? A
-            Go-playing analyst? Honestly, your guess is as good as mine—I&apos;m
-            still exploring the plot. 🤷{" "}
-            <span className="plot-twist-note">
-              Consider this just the trailer.
-            </span>
+            I aim to keep building at the intersection of neural computation,
+            quantitative behavior, and machine learning—one careful experiment
+            and model at a time.
           </p>
           <Link to="/about" className="section-link">
             View Full Profile →

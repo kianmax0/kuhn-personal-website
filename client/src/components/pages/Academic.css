@@ -157,10 +157,34 @@
   opacity: 0.85;
 }
 
-/* Wider left column for experience periods (e.g. "2025 - Present") */
+.award-row-highlights {
+  margin: 0.5rem 0 0;
+  padding-left: 1.15rem;
+  list-style: disc;
+}
+
+.award-row-highlights li {
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  opacity: 0.9;
+}
+
+/* Fixed left column so Education / Experience body text shares one left edge */
+.exp-row {
+  display: grid;
+  grid-template-columns: 12.5rem minmax(0, 1fr);
+  column-gap: 1.75rem;
+  align-items: start;
+}
+
 .exp-row-period {
-  flex-basis: 120px;
-  white-space: nowrap;
+  flex: none;
+  width: auto;
+  white-space: normal;
+  line-height: 1.35;
+  word-break: break-word;
 }
 
 @media (max-width: 768px) {
@@ -169,6 +193,10 @@
   }
   .award-row-year {
     flex-basis: 48px;
+  }
+  .exp-row {
+    grid-template-columns: 1fr;
+    row-gap: 0.35rem;
   }
   .exp-row-period {
     flex-basis: auto;

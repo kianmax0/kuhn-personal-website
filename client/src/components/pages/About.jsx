@@ -9,64 +9,41 @@ const About = () => {
   const { isDark } = useContext(ThemeContext);
   const brainChartRef = useRef(null);
   const projectChartRef = useRef(null);
-  const [timeSinceBug, setTimeSinceBug] = useState(0);
   const [status, setStatus] = useState("Running Experiments");
-  const [sanityLevel, setSanityLevel] = useState(25);
-  const [missionProgress, setMissionProgress] = useState(8);
-  const [caffeineLevel, setCaffeineLevel] = useState(85);
-  const [focusIndex, setFocusIndex] = useState(45);
+  const [focusLevel, setFocusLevel] = useState(72);
+  const [experimentProgress, setExperimentProgress] = useState(58);
+  const [energyLevel, setEnergyLevel] = useState(70);
+  const [readingQueue, setReadingQueue] = useState(64);
 
-  // 控制台彩蛋
   useEffect(() => {
     console.log(
-      "%cHey, you found me! 🕵️\u200d♂️\n" +
-        "Hope my code (and my vagus nerve research) looks good.\n" +
-        "BTW, if you know why this bug exists, please contact me.\n" +
-        "Or if you're single too. 😉\n" +
+      "%cHey, you found me!\n" +
+        "Hope my code and neuroscience work look solid.\n" +
+        "If something seems off, feel free to reach out.\n" +
         "\n" +
-        "-- Neuroscience Researcher & Code Explorer\n" +
-        "-- Currently debugging both neurons and JavaScript",
+        "-- Computational & Systems Neuroscience\n" +
+        "-- Building models of neural population dynamics",
       "color: #00ff88; font-size: 14px; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,255,136,0.3);",
     );
   }, []);
 
-  // 提取常量避免重复创建
   const STATUS_MESSAGES = [
-    "Poking Ears... 👂",
-    "Staring at Neurons... 🧠",
-    "Compiling Brain... 🤯",
-    "Saving the World... 🎮",
-    "Questioning Reality... 🤔",
-    "Caffeinating... ☕",
-    "Exploring Rabbit Holes... 🕳️",
-    "Debugging Life... 🐛",
-    "Decoding DNA... 🧬",
-    "Peer Reviewing... 📝",
-    "Procrastinating Productively... 😅",
-    "Contemplating P-values... 📊",
-    "Hunting for Grants... 💰",
-    "Surviving Academia... 🎓",
-    "Optimizing Protocols... 🔬",
-    "Battling Imposter Syndrome... 😰",
-    "Channeling Inner Sherlock... 🔍",
-    "Achieving Work-Life Balance... ⚖️",
-    "Looking for Girlfriend... 👀💕",
-    "Swiping Right... 📱💖",
-    "Gaming at 3AM... 🎮🌙",
-    "Rage Quitting... 😡🎯",
-    "Building PC... 🖥️🔧",
-    "Watching Anime... 📺✨",
-    "Ordering Takeout... 🎮📞",
-    "Learning Guitar... 🎸🎵",
-    "Pretending to Exercise... 🏃‍♂️😴",
-    "Scrolling Memes... 📱😂",
-    "Planning World Domination... 🌍👑",
-    "Avoiding Responsibilities... 🙈📚",
-    "Living My Best Life... ✨🎉",
-    "Embracing Chaos... 🌪️😎",
+    "Analyzing calcium imaging data... 🔬",
+    "Fitting state-space models... 📊",
+    "Reading theoretical neuroscience... 📚",
+    "Running lab experiments... 🧪",
+    "Training recurrent networks... 🧠",
+    "Quantifying mouse behavior... 🐭",
+    "Playing Go... ⚫⚪",
+    "Coding analysis pipelines... 💻",
+    "Reviewing papers... 📝",
+    "Skiing weekend recharge... ⛷️",
+    "Badminton break... 🏸",
+    "Debugging model training... 🐛",
+    "Writing up results... ✍️",
+    "Exploring population dynamics... 🌊",
   ];
 
-  // Chart configuration constants
   const CHART_COLORS = {
     backgrounds: [
       "rgba(50, 50, 50, 0.8)",
@@ -113,26 +90,24 @@ const About = () => {
     cornerRadius: 8,
   };
 
-  // Chart data constants
   const BRAIN_LABELS = [
-    "Enjoying My Life",
-    "Coding",
+    "Research & Lab",
     "Paper Reading",
-    "Lab Experiments",
-    "Random Thoughts",
+    "Coding & Modeling",
+    "Sports & Outdoors",
+    "Rest & Recharge",
   ];
-  const BRAIN_DATA = [25, 10, 20, 20, 25];
+  const BRAIN_DATA = [30, 20, 25, 15, 10];
 
   const PROJECT_LABELS = [
-    "New Ideas",
-    "Started Projects",
-    "Half-Done",
-    "Actually Finished",
-    "Currently Working",
+    "Ideas",
+    "In Progress",
+    "Under Review",
+    "Completed",
+    "Active Focus",
   ];
-  const PROJECT_DATA = [95, 80, 60, 15, 2];
+  const PROJECT_DATA = [40, 55, 25, 70, 45];
 
-  // Calculate age and version based on birthday 2006-04-13
   const calculateAgeAndVersion = () => {
     const birthday = new Date("2006-04-13");
     const now = new Date();
@@ -141,17 +116,16 @@ const About = () => {
     let months = now.getMonth() - birthday.getMonth();
     let days = now.getDate() - birthday.getDate();
 
-    // Adjust for negative values
     if (days < 0) {
       months--;
-      days += 30; // Approximate
+      days += 30;
     }
     if (months < 0) {
       years--;
       months += 12;
     }
 
-    const patchVersion = Math.floor(days / 7); // weeks as patch version
+    const patchVersion = Math.floor(days / 7);
 
     return {
       age: `${years}y ${months}m ${days}d`,
@@ -159,8 +133,6 @@ const About = () => {
     };
   };
 
-  // Create common chart configurations
-  // Chart utility functions
   const createCommonOptions = () => ({
     responsive: true,
     maintainAspectRatio: false,
@@ -182,9 +154,7 @@ const About = () => {
     },
   });
 
-  // 优化的图表初始化
   useEffect(() => {
-    // 清理现有图表实例
     if (brainChartRef.current?.chart) {
       brainChartRef.current.chart.destroy();
     }
@@ -192,7 +162,6 @@ const About = () => {
       projectChartRef.current.chart.destroy();
     }
 
-    // Brain composition pie chart
     const brainCtx = brainChartRef.current?.getContext("2d");
     if (brainCtx) {
       const brainChart = new Chart(brainCtx, {
@@ -219,7 +188,6 @@ const About = () => {
       brainChartRef.current.chart = brainChart;
     }
 
-    // Project status bar chart
     const projectCtx = projectChartRef.current?.getContext("2d");
     if (projectCtx) {
       const projectChart = new Chart(projectCtx, {
@@ -261,7 +229,6 @@ const About = () => {
     }
   }, [isDark]);
 
-  // 优化的定时器逻辑
   useEffect(() => {
     const createRandomUpdater =
       (setter, changeRange, bias = 0, min = 0, max = 100) =>
@@ -275,18 +242,17 @@ const About = () => {
       STATUS_MESSAGES[Math.floor(Math.random() * STATUS_MESSAGES.length)];
 
     const intervalConfigs = [
-      { fn: () => setTimeSinceBug((prev) => prev + 1), delay: 1000 },
       { fn: () => setStatus(getRandomStatus()), delay: 8000 },
-      { fn: createRandomUpdater(setSanityLevel, 4, -0.1, 0, 30), delay: 2000 },
+      { fn: createRandomUpdater(setFocusLevel, 4, 0, 55, 90), delay: 2000 },
       {
-        fn: createRandomUpdater(setMissionProgress, 2, -0.2, 0, 10),
+        fn: createRandomUpdater(setExperimentProgress, 3, 0, 40, 80),
         delay: 2500,
       },
       {
-        fn: createRandomUpdater(setCaffeineLevel, 4, 0.1, 80, 100),
+        fn: createRandomUpdater(setEnergyLevel, 4, 0, 50, 90),
         delay: 1800,
       },
-      { fn: createRandomUpdater(setFocusIndex, 4, -0.2, 0, 60), delay: 2200 },
+      { fn: createRandomUpdater(setReadingQueue, 3, 0, 45, 85), delay: 2200 },
     ];
 
     const intervals = intervalConfigs.map(({ fn, delay }) =>
@@ -295,124 +261,115 @@ const About = () => {
     return () => intervals.forEach(clearInterval);
   }, []);
 
+  const { version, age } = calculateAgeAndVersion();
+
   return (
     <div className="me-dashboard animated-grid-background">
-      {(() => {
-        const { version, age } = calculateAgeAndVersion();
-        return (
-          <div className="dashboard-header">
-            <h1 className="grand-finale">👻 My Personal OS {version}</h1>
-            <p>Personal Operating System - Running for {age}!</p>
-          </div>
-        );
-      })()}
+      <div className="dashboard-header">
+        <h1 className="grand-finale">My Personal OS {version}</h1>
+        <p>Personal Operating System — running for {age}</p>
+      </div>
 
-      {/* Live Vitals Status Bar - Enhanced Personal Edition */}
       <div className="vitals-status-bar">
         <div className="vitals-bar-container ultimate-effect">
           <div className="vital-bar-item">
-            <span className="vital-bar-label">🧠 Sanity Level</span>
+            <span className="vital-bar-label">Focus</span>
             <div className="vital-bar-progress sanity-progress">
               <div
                 className="vital-bar-fill sanity-bar"
-                style={{ width: `${sanityLevel}%` }}
+                style={{ width: `${focusLevel}%` }}
               ></div>
-              <span className="vital-bar-text">{Math.round(sanityLevel)}%</span>
+              <span className="vital-bar-text">{Math.round(focusLevel)}%</span>
             </div>
           </div>
 
           <div className="vital-bar-item">
-            <span className="vital-bar-label">🌍 World Saving</span>
+            <span className="vital-bar-label">Experiment Progress</span>
             <div className="vital-bar-progress mission-progress">
               <div
                 className="vital-bar-fill mission-bar"
-                style={{ width: `${missionProgress}%` }}
+                style={{ width: `${experimentProgress}%` }}
               ></div>
               <span className="vital-bar-text">
-                {Math.round(missionProgress)}%
+                {Math.round(experimentProgress)}%
               </span>
             </div>
           </div>
 
           <div className="vital-bar-item">
-            <span className="vital-bar-label">🧬 Current Activity</span>
+            <span className="vital-bar-label">Current Activity</span>
             <span className="vital-bar-value status-indicator">{status}</span>
           </div>
 
           <div className="vital-bar-item">
-            <span className="vital-bar-label">☕ Caffeine Intake</span>
+            <span className="vital-bar-label">Energy</span>
             <div className="vital-bar-progress caffeine-progress">
               <div
                 className="vital-bar-fill caffeine-bar"
-                style={{ width: `${caffeineLevel}%` }}
+                style={{ width: `${energyLevel}%` }}
               ></div>
-              <span className="vital-bar-text">
-                {Math.round(caffeineLevel)}%
-              </span>
+              <span className="vital-bar-text">{Math.round(energyLevel)}%</span>
             </div>
           </div>
 
           <div className="vital-bar-item">
-            <span className="vital-bar-label">🎯 Focus Index</span>
+            <span className="vital-bar-label">Reading Queue</span>
             <div className="vital-bar-progress focus-progress">
               <div
                 className="vital-bar-fill focus-bar"
-                style={{ width: `${focusIndex}%` }}
+                style={{ width: `${readingQueue}%` }}
               ></div>
-              <span className="vital-bar-text">{Math.round(focusIndex)}%</span>
+              <span className="vital-bar-text">{Math.round(readingQueue)}%</span>
             </div>
           </div>
         </div>
       </div>
 
-      {/* 上方并列区域 */}
       <div className="dashboard-top-row">
-        {/* System Specs - Left */}
         <div className="widget enhanced-widget top-widget">
           <div className="widget-header">
-            <h2>⚙️ Core Processes</h2>
+            <h2>Core Processes</h2>
             <div className="widget-status">System Info</div>
           </div>
           <div className="specs-container">
             <dl className="specs-list compact-specs">
-              <dt>🖥️ CPU:</dt>
-              <dd>Over-caffeinated Brain v3.0 (Triple-core: NEU+CS+ECON)</dd>
+              <dt>CPU:</dt>
+              <dd>Neuroscience + Computation (dual-track)</dd>
 
-              <dt>💾 RAM:</dt>
-              <dd>32GB (10GB studying, 10GB playing, 12GB random thoughts)</dd>
+              <dt>RAM:</dt>
+              <dd>Allocated to experiments, papers, and model building</dd>
 
-              <dt>💽 Storage:</dt>
-              <dd>∞ TB (mostly useless knowledge + stackoverflow solutions)</dd>
+              <dt>Storage:</dt>
+              <dd>Notes, datasets, code, and curated reading</dd>
 
-              <dt>🎮 Graphics:</dt>
-              <dd>Imagination RTX 5090 (performance drops after 10pm)</dd>
+              <dt>Graphics:</dt>
+              <dd>Visualizing population dynamics and behavior</dd>
 
-              <dt>⚡ Power Supply:</dt>
-              <dd>Coffee-X 850W 80+ Caffeine (never fails at 3AM)</dd>
+              <dt>Power Supply:</dt>
+              <dd>Curiosity, coffee, and steady lab routines</dd>
 
-              <dt>🌐 Network:</dt>
-              <dd>Lab WiFi: Unstable but persistent connection</dd>
+              <dt>Network:</dt>
+              <dd>Lab WiFi: reliable enough for science</dd>
 
-              <dt>💿 OS:</dt>
-              <dd>ProcrastinationOS 2026 (surprisingly stable system)</dd>
+              <dt>OS:</dt>
+              <dd>ResearchOS 2026 (iterating in production)</dd>
             </dl>
           </div>
         </div>
 
-        {/* Personal Status - Right */}
         <div className="widget enhanced-widget top-widget ultimate-effect">
           <div className="widget-header">
-            <h2>🖥️ System Monitor</h2>
+            <h2>System Monitor</h2>
             <div className="widget-status">Live Stats</div>
           </div>
           <div className="personal-status-container">
             <div className="status-item">
-              <dt>📍 Current Location:</dt>
+              <dt>Current Location:</dt>
               <dd>Hangzhou, China</dd>
             </div>
 
             <div className="status-item">
-              <dt>🎂 Earth Online Runtime:</dt>
+              <dt>Earth Online Runtime:</dt>
               <dd>
                 Loaded for{" "}
                 {(() => {
@@ -424,63 +381,29 @@ const About = () => {
                   ).toFixed(6);
                   return years;
                 })()}{" "}
+                years
               </dd>
             </div>
 
             <div className="status-item">
-              <dt>❤️ Relationship Status:</dt>
-              <dd>In a committed bug-free relationship 🥰</dd>
+              <dt>Interests:</dt>
+              <dd>Go · Reading · Skiing · Badminton · Gaming · Building tools</dd>
             </div>
 
             <div className="status-item">
-              <dt>🎮 Gaming:</dt>
+              <dt>Gaming:</dt>
+              <dd>CSGO &amp; Apex Legends</dd>
+            </div>
+
+            <div className="status-item">
+              <dt>Reading Queue:</dt>
               <dd>
-                <span
-                  style={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: "8px",
-                    flexWrap: "wrap",
-                  }}
-                >
-                  💻 CSGO & Apex Legends
-                  <span style={{ color: "#ff9800", fontSize: "0.8em" }}>
-                    [Status: Hibernating]
-                  </span>
-                </span>
+                &quot;Theoretical Neuroscience&quot; — Xiao-Jing Wang
               </dd>
             </div>
 
             <div className="status-item">
-              <dt>📚 Reading Queue:</dt>
-              <dd>"THEORETICAL NRUROSCIENCE" - XIAO-JING WANG</dd>
-            </div>
-
-            <div className="status-item">
-              <dt>🧠 Personality.config:</dt>
-              <dd>
-                <span
-                  style={{
-                    cursor: "pointer",
-                    textDecoration: "underline",
-                    color: "#64b5f6",
-                    fontWeight: "bold",
-                  }}
-                  onClick={() =>
-                    alert(
-                      '🤣 They say I\'m ENTJ-A - "The Commander"\n\nBut honestly, I think it\'s more like:\n🧠 "Eternally Needs Toジ Analyze"\n☕ "Extremely Neurotic, Thinks Alot"\n🔍 "Explores Neural Tissue Actively"\n\n👁️ Click around to discover more about this chaotic system!',
-                    )
-                  }
-                  title="Click me for personality insights!"
-                >
-                  ENTJ-A
-                </span>
-                (The Commander... of my own chaos 😅)
-              </dd>
-            </div>
-
-            <div className="status-item">
-              <dt>🛠️ Runtime.dependencies:</dt>
+              <dt>Runtime.dependencies:</dt>
               <dd>
                 <div
                   style={{
@@ -497,7 +420,7 @@ const About = () => {
                       gap: "12px",
                     }}
                   >
-                    📚 Zotero
+                    Zotero
                     <span style={{ color: "#4caf50", fontSize: "0.9em" }}>
                       [Running]
                     </span>
@@ -509,7 +432,7 @@ const About = () => {
                       gap: "12px",
                     }}
                   >
-                    🌍 Safari
+                    Safari
                     <span style={{ color: "#2196f3", fontSize: "0.9em" }}>
                       [Active]
                     </span>
@@ -521,7 +444,7 @@ const About = () => {
                       gap: "12px",
                     }}
                   >
-                    💻 Cursor
+                    Cursor
                     <span style={{ color: "#ff5722", fontSize: "0.9em" }}>
                       [Always On]
                     </span>
@@ -533,7 +456,7 @@ const About = () => {
                       gap: "12px",
                     }}
                   >
-                    🎧 Spotify
+                    Spotify
                     <span style={{ color: "#1db954", fontSize: "0.9em" }}>
                       [Background]
                     </span>
@@ -543,32 +466,29 @@ const About = () => {
             </div>
 
             <div className="status-item">
-              <dt>💡 Current Mood:</dt>
-              <dd>
-                Caffeinated & Optimistic (with occasional existential dread)
-              </dd>
+              <dt>Current Mode:</dt>
+              <dd>Focused, curious, and building carefully</dd>
             </div>
           </div>
         </div>
       </div>
 
-      {/* 下方横版Memory Cache区域 */}
       <div className="dashboard-bottom-section">
         <div className="widget analytics-widget enhanced-widget horizontal-widget ultimate-effect">
           <div className="widget-header">
-            <h2>💾 Memory Cache</h2>
+            <h2>Memory Cache</h2>
             <div className="widget-status">Brain Analytics</div>
           </div>
           <div className="analytics-container">
             <div className="horizontal-charts">
               <div className="chart-section horizontal-chart">
-                <h3>⏰ Time Usage Distribution</h3>
+                <h3>Time Usage Distribution</h3>
                 <div className="chart-container horizontal-chart-container">
                   <canvas ref={brainChartRef}></canvas>
                 </div>
               </div>
               <div className="chart-section horizontal-chart">
-                <h3>📈 Project Status Overview</h3>
+                <h3>Project Status Overview</h3>
                 <div className="chart-container horizontal-chart-container">
                   <canvas ref={projectChartRef}></canvas>
                 </div>
@@ -576,12 +496,12 @@ const About = () => {
             </div>
             <div className="stats-summary horizontal-stats">
               <div className="stat-item">
-                <span className="stat-label">💾 Cache Hit Rate:</span>
+                <span className="stat-label">Cache Hit Rate:</span>
                 <span className="stat-value">94.2%</span>
               </div>
               <div className="stat-item">
-                <span className="stat-label">🔄 Active Processes:</span>
-                <span className="stat-value">127</span>
+                <span className="stat-label">Active Processes:</span>
+                <span className="stat-value">12</span>
               </div>
             </div>
           </div>
@@ -590,4 +510,5 @@ const About = () => {
     </div>
   );
 };
+
 export default About;

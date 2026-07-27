@@ -215,7 +215,7 @@ const MomentsPage = () => {
                   <span className="stat-label">joined</span>
                 </div>
                 <div className="stat">
-                  <span className="stat-number">Hangzhou</span>
+                  <span className="stat-number">Shanghai</span>
                   <span className="stat-label">location</span>
                 </div>
               </div>
