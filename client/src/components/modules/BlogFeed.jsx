@@ -19,7 +19,7 @@ const BlogFeed = () => {
         <article key={post.slug} className="article-card blog-feed-card">
           <p className="article-date">{formatDate(post.date)}</p>
           <h3 className="blog-card-title">
-            <Link to={`/blog/${post.slug}`}>{post.title}</Link>
+            <Link to={`/notes/${post.slug}`}>{post.title}</Link>
           </h3>
           {post.subtitle && (
             <p className="blog-feed-subtitle">{post.subtitle}</p>
@@ -34,7 +34,7 @@ const BlogFeed = () => {
           <p className="blog-excerpt">{post.excerpt}</p>
           <p className="blog-meta">
             {post.readTime} read ·{" "}
-            <Link to={`/blog/${post.slug}`}>Read more →</Link>
+            <Link to={`/notes/${post.slug}`}>Read more →</Link>
           </p>
         </article>
       ))}

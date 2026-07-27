@@ -28,7 +28,10 @@ const Home = () => {
           <div style={{ animation: "fadeInDown 0.8s ease-out" }}>
             <h1 className="hero-title">Hi, I'm Kuhn 👋</h1>
           </div>
-          <p className="hero-tagline">A Neuroscience Undergraduate</p>
+          <p className="hero-tagline">
+            Computational &amp; Systems Neuroscience | Neural Population
+            Dynamics | NeuroAI
+          </p>
           <p className="hero-description">
             Welcome to my digital space. <br></br>Explore my work, thoughts, and
             creative moments.
@@ -52,26 +55,24 @@ const Home = () => {
             <div className="about-block">
               <h3>🎓 Who I Am</h3>
               <p>
-                On paper, I&apos;m a third-year Bioscience student at Westlake
-                University.
+                I am a Life Sciences undergraduate at Westlake University and a
+                research intern in the Yusi Chen Lab at the Institute of
+                Neuroscience. I study how internal states shape social behavior
+                and how these computations emerge in neural population dynamics.
               </p>
               <p>
-                Off paper, I&apos;m a neuroscience-obsessed generalist who likes
-                asking why brains do what they do—and then trying to model it.
+                My work combines quantitative mouse behavior, calcium-imaging
+                analysis, state-space modeling, and task-trained recurrent neural
+                networks.
               </p>
             </div>
             <div className="about-block">
               <h3>🧠 What I&apos;m Researching</h3>
               <p>
-                Right now I study how the hypothalamic{" "}
-                <strong>medial preoptic nucleus (MPN)</strong> computes{" "}
-                <strong>Social Need</strong>—how the brain quantifies the drive
-                for social contact and turns it into motivated behavior.
-              </p>
-              <p>
-                In short: I want to know how a need-like social signal gets
-                represented in neural activity, and what that tells us about
-                belonging, motivation, and everything in between.
+                My interests sit at the intersection of{" "}
+                <strong>Computational &amp; Systems Neuroscience</strong>,{" "}
+                <strong>Neural Population Dynamics</strong>, and{" "}
+                <strong>NeuroAI</strong>.
               </p>
             </div>
             <div className="about-block">
@@ -160,14 +161,14 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ===== Blog Section ===== */}
+      {/* ===== Notes Section ===== */}
       <section className="home-section blog-section">
         <div className="section-container">
-          <h2>Blog</h2>
+          <h2>Notes</h2>
           <p className="section-subtitle">Long-form notes and derivations.</p>
           <BlogFeed />
-          <Link to="/blog" className="section-link">
-            View All Posts →
+          <Link to="/notes" className="section-link">
+            View All Notes →
           </Link>
         </div>
       </section>
@@ -269,6 +270,15 @@ const Home = () => {
                 >
                   <span className="social-icon">📺</span>
                   <span>Bilibili</span>
+                </a>
+                <a
+                  href="https://www.zhihu.com/people/qi-777-56-60/posts"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-button zhihu-button"
+                >
+                  <span className="zhihu-icon">知</span>
+                  <span>Zhihu</span>
                 </a>
               </div>
             </div>

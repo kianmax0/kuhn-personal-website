@@ -100,7 +100,7 @@ const Contact = () => {
                 }`}
                 onClick={() =>
                   handleLineClick(5, () =>
-                    handleEmailClick("zhaokun@westlake.edu.cn")
+                    handleEmailClick("zhaokun@westlake.edu.cn"),
                   )
                 }
               >
@@ -122,7 +122,7 @@ const Contact = () => {
                 }`}
                 onClick={() =>
                   handleLineClick(6, () =>
-                    handleEmailClick("kuhnkuhn@berkeley.edu")
+                    handleEmailClick("kuhnkuhn@berkeley.edu"),
                   )
                 }
               >
@@ -162,7 +162,7 @@ const Contact = () => {
                 }`}
                 onClick={() =>
                   handleLineClick(9, () =>
-                    handleWechatClick("Dogedogedogecoin")
+                    handleWechatClick("Dogedogedogecoin"),
                   )
                 }
               >
@@ -188,8 +188,8 @@ const Contact = () => {
                 onClick={() =>
                   handleLineClick(10, () =>
                     handleLinkClick(
-                      "https://space.bilibili.com/256800766?spm_id_from=333.1007.0.0"
-                    )
+                      "https://space.bilibili.com/256800766?spm_id_from=333.1007.0.0",
+                    ),
                   )
                 }
               >
@@ -215,8 +215,8 @@ const Contact = () => {
                 onClick={() =>
                   handleLineClick(11, () =>
                     handleLinkClick(
-                      "https://steamcommunity.com/profiles/76561198993237339/"
-                    )
+                      "https://steamcommunity.com/profiles/76561198993237339/",
+                    ),
                   )
                 }
               >
@@ -238,7 +238,7 @@ const Contact = () => {
                 } github-contact-line`}
                 onClick={() =>
                   handleLineClick(12, () =>
-                    handleLinkClick("https://github.com/kianmax0")
+                    handleLinkClick("https://github.com/kianmax0"),
                   )
                 }
                 style={{
@@ -287,8 +287,8 @@ const Contact = () => {
                 onClick={() =>
                   handleLineClick(13, () =>
                     handleLinkClick(
-                      "https://scholar.google.com/citations?user=MFsbreQAAAAJ&hl=en"
-                    )
+                      "https://scholar.google.com/citations?user=MFsbreQAAAAJ&hl=en",
+                    ),
                   )
                 }
                 style={{
@@ -320,33 +320,57 @@ const Contact = () => {
                 </span>
               </div>
 
-              {/* Line 14: Social section end */}
-              <div className="code-line">
+              {/* Line 14: Zhihu */}
+              <div
+                className={`code-line clickable ${
+                  selectedLine === 14 ? "selected" : ""
+                }`}
+                onClick={() =>
+                  handleLineClick(14, () =>
+                    handleLinkClick(
+                      "https://www.zhihu.com/people/qi-777-56-60/posts",
+                    ),
+                  )
+                }
+              >
                 <span className="line-number">14</span>
+                <span className="code-text">
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <span className="property">zhihu</span>
+                  <span className="operator">:</span>{" "}
+                  <span className="string">"qi-777-56-60"</span>
+                  <span className="punctuation">,</span>
+                  <span className="comment"> // 知 Click to visit Zhihu</span>
+                </span>
+              </div>
+
+              {/* Line 15: Social section end */}
+              <div className="code-line">
+                <span className="line-number">15</span>
                 <span className="code-text">
                   &nbsp;&nbsp;<span className="bracket">{"}"}</span>
                   <span className="punctuation">,</span>
                 </span>
               </div>
 
-              {/* Line 15: Object end */}
+              {/* Line 16: Object end */}
               <div className="code-line">
-                <span className="line-number">15</span>
+                <span className="line-number">16</span>
                 <span className="code-text">
                   <span className="bracket">{"}"}</span>
                   <span className="punctuation">;</span>
                 </span>
               </div>
 
-              {/* Line 16: Empty line */}
+              {/* Line 17: Empty line */}
               <div className="code-line">
-                <span className="line-number">16</span>
+                <span className="line-number">17</span>
                 <span className="code-text"></span>
               </div>
 
-              {/* Line 17: Export statement */}
+              {/* Line 18: Export statement */}
               <div className="code-line">
-                <span className="line-number">17</span>
+                <span className="line-number">18</span>
                 <span className="code-text">
                   <span className="keyword">export</span>{" "}
                   <span className="keyword">default</span>{" "}

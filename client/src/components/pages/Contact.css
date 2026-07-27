@@ -1,11 +1,12 @@
+/* Import Home page styles for consistent background */
+@import "./Home.css";
+
 .github-contact-line .code-text {
   justify-content: center;
   display: flex !important;
   align-items: center;
   gap: 6px;
 }
-/* Import Home page styles for consistent background */
-@import "./Home.css";
 
 /* Contact Page Styles */
 .contact-page {

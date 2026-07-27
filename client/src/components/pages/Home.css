@@ -55,9 +55,11 @@
   -webkit-text-fill-color: unset;
 }
 .hero-tagline {
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   font-weight: 600;
-  margin: 0 0 12px;
+  max-width: 52rem;
+  margin: 0 auto 12px;
+  line-height: 1.45;
   transition: color 0.3s ease;
 }
 .hero-description {
@@ -534,7 +536,8 @@
 }
 
 .contact-value {
-  font-family: "SF Mono", "Monaco", "Inconsolata", "Fira Code", "Dank Mono",
+  font-family:
+    "SF Mono", "Monaco", "Inconsolata", "Fira Code", "Dank Mono",
     "Operator Mono", "Courier New", monospace;
   background: #f8f9fa;
   border: 1px solid #e9ecef;
@@ -543,7 +546,9 @@
   font-size: 0.9rem;
   display: inline-block;
   margin-top: 0;
-  transition: background-color 0.3s ease, border-color 0.3s ease,
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
     color 0.3s ease;
 }
 
@@ -593,6 +598,32 @@
   background: #2a475e;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(23, 26, 33, 0.3);
+}
+
+.zhihu-button {
+  background: #fff;
+  color: #4285f4;
+  border: 2px solid #4285f4;
+}
+
+.zhihu-button:hover {
+  background: #4285f4;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(66, 133, 244, 0.15);
+}
+
+.zhihu-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.35em;
+  height: 1.35em;
+  border: 1.5px solid currentColor;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  line-height: 1;
 }
 
 .social-icon {
@@ -691,7 +722,9 @@ body {
   display: flex;
   flex-direction: column;
   gap: 28px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
   cursor: pointer;
 }
 

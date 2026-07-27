@@ -15,10 +15,10 @@ const BlogPost = () => {
           <div className="hero-title-container">
             <h1 className="hero-title">Post Not Found</h1>
             <p className="hero-subtitle">
-              The blog post you are looking for does not exist.
+              The note you are looking for does not exist.
             </p>
-            <Link to="/blog" className="blog-back-link">
-              ← Back to Blog
+            <Link to="/notes" className="blog-back-link">
+              ← Back to Notes
             </Link>
           </div>
         </section>
@@ -31,9 +31,7 @@ const BlogPost = () => {
       <section className="hero-title-section blog-post-hero">
         <div className="hero-title-container">
           <h1 className="hero-title blog-post-title">{post.title}</h1>
-          {post.subtitle && (
-            <p className="hero-subtitle">{post.subtitle}</p>
-          )}
+          {post.subtitle && <p className="hero-subtitle">{post.subtitle}</p>}
           <div className="blog-post-meta">
             <span>{post.readTime} read</span>
             <div className="blog-tags">
@@ -62,8 +60,11 @@ const BlogPost = () => {
                 Download PDF
               </a>
             )}
-            <Link to="/blog" className="blog-action-button blog-action-secondary">
-              ← Back to Blog
+            <Link
+              to="/notes"
+              className="blog-action-button blog-action-secondary"
+            >
+              ← Back to Notes
             </Link>
           </div>
         </div>
